@@ -4,6 +4,8 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\BranchController;
+use App\Http\Controllers\Backend\StaffController;
+use App\Http\Controllers\frontend\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,45 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+
+
+
+Route::get('/', function () {
+    return redirect()->route('user');
+});
+
+
+Route::group(['prefix'=>'user-portal'],function(){
+    Route::get('/', function () {
+        return view('Frontend.index');
+    })->name('user');
+
+    Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
+    Route::post('/login',[UserController::class,'login'])->name('user.login');
+    Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/', function () {
     return redirect()->route('admin');
@@ -43,4 +84,11 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/branch/add-branch',[BranchController::class,'create'])->name('branch.create');
     Route::post('/branch/add-branch',[BranchController::class,'store'])->name('branch.store');
     Route::get('/branch/branch-list',[BranchController::class,'list'])->name('branch.list');
+
+    Route::get('/branch/add-staff',[StaffController::class,'create'])->name('staff.create');
+    Route::post('/branch/add-staff',[StaffController::class,'store'])->name('staff.store');
+    Route::get('/branch/staff-list',[StaffController::class,'list'])->name('staff.list');
+
+
+
 });

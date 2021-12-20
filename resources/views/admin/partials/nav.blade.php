@@ -9,11 +9,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><strong><i class="icon fa fa-plane"></i> BRILLIANT</strong></a>
+        <a class="navbar-brand" href="index.html"><strong><i class="icon fa fa-plane"></i> CSMS</strong></a>
 
-<div id="sideNav" href="">
-<i class="fa fa-bars icon"></i>
-</div>
+     <div id="sideNav" href="">
+       <i class="fa fa-bars icon"></i>
+     </div>
     </div>
 
     <ul class="nav navbar-top-links navbar-right">
@@ -248,16 +248,16 @@
                         <a href="{{route('branch.list')}}">Branch list</a>
                     </li>
                     <li>
-                        <a href="morris-chart.html">Add Staff</a>
+                        <a href="{{route('staff.create')}}">Add Staff</a>
                     </li>
                     <li>
-                        <a href="morris-chart.html">Staff list</a>
+                        <a href="{{route('staff.list')}}">Staff list</a>
                     </li>
                     </ul>
                 </li>
 
             <li>
-                <a href="tab-panel.html"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
+                <a href="tab-panel.html"><i class="fa fa-qrcode"></i>Courier Details</a>
             </li>
 
             <li>

@@ -1,3 +1,4 @@
+
 @extends('admin.master')
 
 
@@ -18,8 +19,8 @@
     @endif
 
 
-<h1>Branch list</h1>
-<a href="{{route('branch.create')}}" class="btn btn-success">Create new branch</a>
+<h1></h1>
+<a href="{{route('branch.create')}}" class="btn btn-success">Create new branch list</a>
 
 <table class="table">
     <thead>

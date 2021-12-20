@@ -4,28 +4,49 @@
 @section('content')
 
 
-<h1>   ADD BRANCH</h1>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="card-title">
+                    <div class="title">ADD BRANCH</div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form action="{{route('branch.store')}}" method="post">
+                    @csrf
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Division</label>
+                        <input type="text" class="form-control" id="fname" name="division" placeholder="Enter your Division">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">District</label>
+                        <input type="text" class="form-control" id="fname" name="district" placeholder="Enter your District">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Office Name</label>
+                        <input type="text" class="form-control" id="fname" name="office" placeholder="Enter your Office Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Address</label>
+                        <input type="text" class="form-control" id="fname" name="address" placeholder="Enter your Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Contact</label>
+                        <input type="text" class="form-control" id="fname" name="contact" placeholder="Enter your Contact">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Office Type</label>
+                        <input type="text" class="form-control" id="fname" name="type"placeholder="Enter your Office Type">
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-
-
-
-
-<form action="{{route('branch.store')}}" method="post">
-    @csrf
-    <label for="fname">Division:</label><br>
-    <input type="text" id="fname" name="division" placeholder="Enter your Division"><br>
-    <label for="lname">District:</label><br>
-    <input type="text" id="lname" name="district" placeholder="Enter your District"><br>
-    <label for="fname">Office Name:</label><br>
-    <input type="text" id="fname" name="office" placeholder="Enter your Office Name"><br>
-    <label for="fname">Address:</label><br>
-    <input type="text" id="fname" name="address" placeholder="Enter your Address"><br>
-    <label for="fname">Contact:</label><br>
-    <input type="text" id="fname" name="contact" placeholder="Enter your Contact"><br>
-    <label for="fname">Office Type:</label><br>
-    <input type="text" id="fname" name="type" placeholder="Enter your Office Type"><br>
-    <input type="submit" value="Submit">
-    <input type="reset">
-  </form>
   @endsection
