@@ -1,9 +1,11 @@
 
+
+
 @extends('admin.master')
 
 @section('content')
 
-    <h1>Order list</h1>
+    <h1>Parcel Details</h1>
 
     <table class="table">
     <thead>

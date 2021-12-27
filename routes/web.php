@@ -5,7 +5,10 @@ use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\BranchController;
 use App\Http\Controllers\Backend\StaffController;
+use App\Http\Controllers\Backend\LoginController;
+use App\Http\Controllers\Backend\ParcelController;
 use App\Http\Controllers\frontend\UserController;
+use App\Http\Controllers\frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +40,8 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
     Route::post('/login',[UserController::class,'login'])->name('user.login');
     Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+    Route::get('/home one',[HomeController::class,'home'])->name('user.home.one');
+
 
 
 
@@ -57,16 +62,20 @@ Route::group(['prefix'=>'user-portal'],function(){
 
 
 
-
-Route::get('/', function () {
-    return redirect()->route('admin');
-});
+Route::get('/admin-portal/login',[LoginController::class,'login'])->name('admin.login');
+Route::post('/admin-portal/login',[LoginController::class,'doLogin'])->name('admin.do.login');
 
 
-Route::group(['prefix'=>'admin-portal'],function(){
+
+
+Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
     Route::get('/', function () {
         return view('admin.master');
     })->name('admin');
+
+
+    Route::get('/signout',[LoginController::class,'logout'])->name('admin.logout');
+
     Route::get('/orders',[OrderController::class,'orderList'])->name('admin.orders');
     Route::get('/products',[ProductController::class,'productList'])->name('admin.products');
     Route::get('/products/create',[ProductController::class,'productCreate'])->name('admin.products.create');
@@ -88,6 +97,12 @@ Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/branch/add-staff',[StaffController::class,'create'])->name('staff.create');
     Route::post('/branch/add-staff',[StaffController::class,'store'])->name('staff.store');
     Route::get('/branch/staff-list',[StaffController::class,'list'])->name('staff.list');
+
+    Route::get('/parcel',[ParcelController::class,'create'])->name('parcel.create');
+    // Route::post('/parcel',[ParcelController::class,'store'])->name('parcel.store');
+     Route::get('/parcel-details',[ParcelController::class,'details'])->name('parcel.details');
+
+
 
 
 

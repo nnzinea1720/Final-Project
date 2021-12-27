@@ -217,7 +217,7 @@
                 <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <li><a href="{{route('admin.logout')}}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>
             </ul>
             <!-- /.dropdown-user -->
@@ -234,7 +234,7 @@
                 <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
+                <a href="ui-elements.html"><i class="fa fa-desktop"></i> Admin</a>
             </li>
 
              <li>
@@ -242,26 +242,26 @@
                 <ul class="nav nav-second-level">
 
                     <li>
-                        <a href="{{route('branch.create')}}">Add Branch</a>
+                        <a href="{{route('branch.create')}}"> Add Branch</a>
                     </li>
                     <li>
-                        <a href="{{route('branch.list')}}">Branch list</a>
+                        <a href="{{route('branch.list')}}"> Branch list</a>
                     </li>
                     <li>
-                        <a href="{{route('staff.create')}}">Add Staff</a>
+                        <a href="{{route('staff.create')}}"> Add Staff</a>
                     </li>
                     <li>
-                        <a href="{{route('staff.list')}}">Staff list</a>
+                        <a href="{{route('staff.list')}}"> Staff list</a>
                     </li>
                     </ul>
                 </li>
 
             <li>
-                <a href="tab-panel.html"><i class="fa fa-qrcode"></i>Courier Details</a>
+                <a href="{{route('parcel.create')}}"><i class="fa fa-qrcode"></i> Parcel</a>
             </li>
 
             <li>
-                <a href="table.html"><i class="fa fa-table"></i> Responsive Tables</a>
+                <a href="{{route('parcel.details')}}"><i class="fa fa-table"></i> Parcel Details</a>
             </li>
             <li>
                 <a href="form.html"><i class="fa fa-edit"></i> Forms </a>
