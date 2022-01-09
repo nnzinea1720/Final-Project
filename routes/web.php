@@ -9,6 +9,8 @@ use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\ParcelController;
 use App\Http\Controllers\frontend\UserController;
 use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\frontend\ContactController;
+use App\Http\Controllers\frontend\NoticeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +43,8 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::post('/login',[UserController::class,'login'])->name('user.login');
     Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
     Route::get('/home one',[HomeController::class,'home'])->name('user.home.one');
+    Route::get('/Contact',[ContactController::class,'contact'])->name('user.contact');
+    Route::get('/Notice board',[NoticeController::class,'notice'])->name('user.notice.board');
 
 
 
@@ -99,7 +103,7 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
     Route::get('/branch/staff-list',[StaffController::class,'list'])->name('staff.list');
 
     Route::get('/parcel',[ParcelController::class,'create'])->name('parcel.create');
-    // Route::post('/parcel',[ParcelController::class,'store'])->name('parcel.store');
+     Route::post('/parcel',[ParcelController::class,'store'])->name('parcel.store');
      Route::get('/parcel-details',[ParcelController::class,'details'])->name('parcel.details');
 
 

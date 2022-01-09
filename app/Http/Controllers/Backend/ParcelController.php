@@ -15,26 +15,27 @@ class ParcelController extends Controller
 
         public function details()
         {
-        //    $details= Parcel::all();
-            return view('admin.layouts.parcel-detail');
-            // ,compact('details'));
+           $details= Parcel::all();
+            return view('admin.layouts.parcel-detail',compact('details'));
         }
 
 
-        // public function store(Request $request)
-        // {
-        //     Parcel::create([
+        public function store(Request $request)
+        {
+            Parcel::create([
 
-        //             'name'=>$request->name,
-        //             'address'=>$request->address,
-        //             'reciever'=>$request->reciever,
-        //             'radd'=>$request->radd,
-        //             'contact'=>$request->contact,
+                    'name'=>$request->name,
+                    'address'=>$request->address,
+                    'receiver'=>$request->receiver,
+                    'rec_address'=>$request->rec_address,
+                    'contact'=>$request->contact,
 
 
 
-        //     ]);
-        //     return redirect()->back();
-        // }
+            ]);
+            return redirect()->back();
+        }
+
+
 
 }

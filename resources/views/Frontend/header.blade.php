@@ -75,7 +75,7 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Notice <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                              <li><a href="projects.html">Notice Board</a></li>
+                              <li><a href="{{route('user.notice.board')}}">Notice Board</a></li>
                             </ul>
                         </li>
 
@@ -95,7 +95,9 @@
 
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+
+                        <li class="nav-item"><a class="nav-link" href="{{route('user.contact')}}">Contact</a></li>
                     </ul>
 
 

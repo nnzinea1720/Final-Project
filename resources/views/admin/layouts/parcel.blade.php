@@ -19,19 +19,19 @@
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
-                        <input type="text" class="form-control" id="fname" name="division" placeholder="Enter your Name">
+                        <input type="text" class="form-control" id="fname" name="name" placeholder="Enter your Name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Address</label>
-                        <input type="text" class="form-control" id="fname" name="district" placeholder="Enter your Address">
+                        <input type="text" class="form-control" id="fname" name="address" placeholder="Enter your Address">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Reciever</label>
-                        <input type="text" class="form-control" id="fname" name="office" placeholder="Enter your Reciever">
+                        <input type="text" class="form-control" id="fname" name="receiver" placeholder="Enter your Reciever">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Rec Add</label>
-                        <input type="text" class="form-control" id="fname" name="address" placeholder="Enter your Rec Add">
+                        <input type="text" class="form-control" id="fname" name="rec_address" placeholder="Enter your Rec Add">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Contact</label>
