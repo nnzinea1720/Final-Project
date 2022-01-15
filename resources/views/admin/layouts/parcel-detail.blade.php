@@ -16,6 +16,7 @@
         <th scope="col">Receiver</th>
         <th scope="col">Receiver Address</th>
          <th scope="col">Contact</th>
+         <th scope="col">Type</th>
         <th scope="col">Action</th>
     </tr>
     </thead>
@@ -30,6 +31,7 @@
         <td>{{$list->receiver}}</td>
         <td>{{$list->rec_address}}</td>
         <td>{{$list->contact}}</td>
+        <td>{{$list->type}}</td>
 
     </tr>
 

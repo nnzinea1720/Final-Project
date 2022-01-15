@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParcelsTable extends Migration
+class CreateTracksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateParcelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('parcels', function (Blueprint $table) {
+        Schema::create('tracks', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address');
-            $table->string('receiver');
-            $table->string('rec_address');
-            $table->string('contact');
-            $table->string('type');
+            $table->integer('no');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ class CreateParcelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parcels');
+        Schema::dropIfExists('tracks');
     }
 }

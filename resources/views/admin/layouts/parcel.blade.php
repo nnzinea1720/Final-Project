@@ -37,6 +37,10 @@
                         <label for="exampleInputPassword1">Contact</label>
                         <input type="text" class="form-control" id="fname" name="contact" placeholder="Enter your Contact">
                     </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Type</label>
+                        <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
+                    </div>
 
                     <button type="submit" class="btn btn-default">Submit</button>
                     <button type="submit" class="btn btn-default">Reset</button>

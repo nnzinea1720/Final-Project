@@ -231,7 +231,7 @@
         <ul class="nav" id="main-menu">
 
             <li>
-                <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                <a class="active-menu" href="{{route('admin')}}"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
                 <a href="ui-elements.html"><i class="fa fa-desktop"></i> Admin</a>
@@ -264,7 +264,7 @@
                 <a href="{{route('parcel.details')}}"><i class="fa fa-table"></i> Parcel Details</a>
             </li>
             <li>
-                <a href="form.html"><i class="fa fa-edit"></i> Forms </a>
+                <a href="{{route('track.create')}}"><i class="fa fa-edit"></i> Tracking </a>
             </li>
 
 

@@ -10,7 +10,10 @@ use App\Http\Controllers\Backend\ParcelController;
 use App\Http\Controllers\frontend\UserController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ContactController;
+use App\Http\Controllers\frontend\ServiceController;
 use App\Http\Controllers\frontend\NoticeController;
+use App\Http\Controllers\Backend\TrackController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,7 +47,9 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
     Route::get('/home one',[HomeController::class,'home'])->name('user.home.one');
     Route::get('/Contact',[ContactController::class,'contact'])->name('user.contact');
+    Route::post('/Contact',[ContactController::class,'contact'])->name('user.contact');
     Route::get('/Notice board',[NoticeController::class,'notice'])->name('user.notice.board');
+    Route::get('/Our Services',[ServiceController::class,'service'])->name('user.our.services');
 
 
 
@@ -74,7 +79,7 @@ Route::post('/admin-portal/login',[LoginController::class,'doLogin'])->name('adm
 
 Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
     Route::get('/', function () {
-        return view('admin.master');
+        return view('admin.layouts.home');
     })->name('admin');
 
 
@@ -97,14 +102,25 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
     Route::get('/branch/add-branch',[BranchController::class,'create'])->name('branch.create');
     Route::post('/branch/add-branch',[BranchController::class,'store'])->name('branch.store');
     Route::get('/branch/branch-list',[BranchController::class,'list'])->name('branch.list');
+    Route::get('/branch/branch-list/Delete/{id}',[BranchController::class,'delete'])->name('branch.delete');
+    Route::get('/branch/branch-list/Edit/{id}',[BranchController::class,'edit'])->name('branch.edit');
+    Route::put('/branch/branch-list/update/{id}',[BranchController::class,'update'])->name('branch.update');
 
     Route::get('/branch/add-staff',[StaffController::class,'create'])->name('staff.create');
     Route::post('/branch/add-staff',[StaffController::class,'store'])->name('staff.store');
     Route::get('/branch/staff-list',[StaffController::class,'list'])->name('staff.list');
 
+
     Route::get('/parcel',[ParcelController::class,'create'])->name('parcel.create');
      Route::post('/parcel',[ParcelController::class,'store'])->name('parcel.store');
      Route::get('/parcel-details',[ParcelController::class,'details'])->name('parcel.details');
+
+     Route::get('/track',[TrackController::class,'create'])->name('track.create');
+     Route::post('/track',[TrackController::class,'store'])->name('track.store');
+
+
+
+
 
 
 

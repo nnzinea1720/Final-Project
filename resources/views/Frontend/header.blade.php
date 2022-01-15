@@ -9,8 +9,8 @@
         <div class="logo-area">
             <div class="row align-items-center">
               <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                  <a class="d-block" href="index.html">
-                    <img loading="lazy" src="https://i.pinimg.com/236x/b1/b5/b4/b1b5b4719333eeb29175945e1beb3445.jpg" alt="Constra">
+                  <a class="d-block" Style="width:50px;" href="index.html">
+                    <img loading="lazy" src="https://i.pinimg.com/236x/b1/b5/b4/b1b5b4719333eeb29175945e1beb3445.jpg" alt="Image">
                   </a>
               </div><!-- logo end -->
 
@@ -68,7 +68,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="about.html">About Us</a></li>
-                              <li><a href="team.html">Our People</a></li>
+
                             </ul>
                         </li>
 
@@ -82,19 +82,13 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                              <li><a href="services.html">Our Services</a></li>
+                              <li><a href="{{route('user.our.services')}}">Our Services</a></li>
 
                             </ul>
                         </li>
 
 
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Location <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                              <li><a href="news-left-sidebar.html">Branch Location</a></li>
 
-                            </ul>
-                        </li>
 
 
                         <li class="nav-item"><a class="nav-link" href="{{route('user.contact')}}">Contact</a></li>

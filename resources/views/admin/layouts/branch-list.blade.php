@@ -32,6 +32,9 @@
         <th scope="col">address</th>
         <th scope="col">contact</th>
         <th scope="col">type</th>
+        <th scope="col">Action</th>
+
+
     </tr>
     </thead>
     <tbody>
@@ -44,6 +47,13 @@
                 <td>{{$branch->address}}</td>
                 <td>{{$branch->contact}}</td>
                 <td>{{$branch->type}}</td>
+                <td>
+                    {{-- <a class="btn btn-primary" href="{{route('backend.category.views',$category->id)}}">View</a> --}}
+                    <a class="btn btn-danger" href="{{route('branch.delete',$branch->id)}}"> Delete</a>
+                    <a class="btn btn-info" href="{{route('branch.edit',$branch->id)}}"> Edit</a>
+                    {{-- <a class="btn btn-primary" href="{{route('branch.add',$branch->id)}}"> Add</a> --}}
+
+                </td>
             </tr>
         @endforeach
 

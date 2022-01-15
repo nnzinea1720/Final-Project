@@ -29,6 +29,9 @@ class ParcelController extends Controller
                     'receiver'=>$request->receiver,
                     'rec_address'=>$request->rec_address,
                     'contact'=>$request->contact,
+                    'type'=>$request->type,
+
+
 
 
 

@@ -39,4 +39,42 @@ class BranchController extends Controller
     }
 
 
+       public function delete($id)
+        {
+           $branchs=Branch::find($id);
+          $branchs->delete();
+         return redirect()->back()->with('success-message','Branch Created Successfully.');
+        }
+
+        public function edit($id)
+        {
+            // dd($id);
+           $branchs=Branch::find($id);
+        //    dd($branchs);
+        //   $branchs->edit();
+        //  return redirect()->back()->with('success-message','Branch Created Successfully.');
+        return view('admin.layouts.edit-branch',compact('branchs'));
+        }
+
+        public function update(Request $request,$id)
+        {
+            // dd($request->all());
+            // dd($id);
+          $branchs=Branch::find($id);
+         $branchs->update([
+            'division'=>$request->division,
+                'district'=>$request->district,
+                'office'=>$request->office,
+                'address'=>$request->address,
+                'contact'=>$request->contact,
+                'type'=>$request->type,
+
+
+        ]);
+             return redirect()->back()->with('success-message', 'Update Created Successfully.');
+    }
+
+
+
+
 }
