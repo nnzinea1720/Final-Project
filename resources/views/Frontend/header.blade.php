@@ -9,8 +9,8 @@
         <div class="logo-area">
             <div class="row align-items-center">
               <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                  <a class="d-block" Style="width:50px;" href="index.html">
-                    <img loading="lazy" src="https://i.pinimg.com/236x/b1/b5/b4/b1b5b4719333eeb29175945e1beb3445.jpg" alt="Image">
+                  <a>
+                    <img loading="lazy"  Style="width:140px;height:80px;" src="https://i.pinimg.com/236x/b1/b5/b4/b1b5b4719333eeb29175945e1beb3445.jpg" alt="Image">
                   </a>
               </div><!-- logo end -->
 

@@ -234,7 +234,7 @@
                 <a class="active-menu" href="{{route('admin')}}"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="ui-elements.html"><i class="fa fa-desktop"></i> Admin</a>
+                <a href="{{route('admin.form')}}"><i class="fa fa-desktop"></i> Admin</a>
             </li>
 
              <li>

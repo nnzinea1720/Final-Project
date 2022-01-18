@@ -34,6 +34,8 @@
         <th scope="col">address</th>
         <th scope="col">contact</th>
         <th scope="col">email</th>
+        <th scope="col">Action</th>
+
     </tr>
     </thead>
     <tbody>

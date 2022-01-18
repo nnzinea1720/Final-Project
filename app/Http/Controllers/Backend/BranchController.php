@@ -7,6 +7,24 @@ use Illuminate\Http\Request;
 
 class BranchController extends Controller
 {
+    public function show(Request $request)
+    {
+       $search = $request->query('search');
+    //    dd(request()->all());
+       if($search)
+      {
+
+         $branchs = Branch::where('id', 'LIKE', '%' .$search. '%')
+         ->orWhere('division', 'LIKE', '%' .$search. '%')
+         ->orWhere('district', 'LIKE', '%' .$search. '%')
+         ->orWhere('office', 'LIKE', '%' .$search. '%')
+         ->orWhere('contact', 'LIKE', '%' .$search. '%')->get();
+        return view('admin.layouts.branch-list',compact('branchs'));
+      }
+       $branchs=Branch::all();
+       return view('admin.layouts.branch-list',compact('branchs'));
+     }
+
 
 
     public function create()
@@ -17,9 +35,10 @@ class BranchController extends Controller
 
     public function list()
     {
-       $lists= Branch::all();
-        return view('admin.layouts.branch-list',compact('lists'));
+       $branchs= Branch::all();
+        return view('admin.layouts.branch-list',compact('branchs'));
     }
+
 
 
     public function store(Request $request)
@@ -74,7 +93,23 @@ class BranchController extends Controller
              return redirect()->back()->with('success-message', 'Update Created Successfully.');
     }
 
+        // public function view($id)
+        // {
+        //     // dd($list_id);
+        //     $branchs=Branch::find($id);
+        //     // dd($lists);
+        //     // $branchs->view();
+        //     // return redirect()->back()->with('success-message','View Created Successfully.');
+        //     return view('admin.layouts.view-branch',Compact('lists'));
 
+        // }
+
+        public function branchview($id)
+        {
+            // dd($id);
+            $branch=Branch::find($id);
+            return view('admin.layouts.view-branch',compact('branch'));
+        }
 
 
 }

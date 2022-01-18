@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 use App\Models\User;
+use App\Models\Parcel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -34,5 +35,13 @@ class LoginController extends Controller
         Auth::logout();
         return redirect()->route('admin.login')->with('message','Logging out.');
     }
+
+
+    public function dashboard()
+    {
+        $parcels=Parcel::count();
+        return view('admin.layouts.home',compact('parcels'));
+    }
+
 
 }

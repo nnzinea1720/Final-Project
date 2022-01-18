@@ -25,8 +25,8 @@
             <div class="panel panel-primary">
             <div class="number">
                 <h3>
-                    <h3>44,023</h3>
-                    <small>Daily Visits</small>
+                    <h3>{{$parcels}}</h3>
+                    <small>Parcels</small>
                 </h3>
             </div>
             <div class="icon">
