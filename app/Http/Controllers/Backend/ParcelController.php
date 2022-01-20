@@ -46,7 +46,11 @@ class ParcelController extends Controller
                     'receiver'=>$request->receiver,
                     'rec_address'=>$request->rec_address,
                     'contact'=>$request->contact,
+                    'delivery_area'=>$request->delivery_area,
+                    'weight'=>$request->weight,
+                    'total_cost'=>$request->total_cost,
                     'type'=>$request->type,
+                    'date'=>$request->date,
 
 
 
@@ -79,16 +83,11 @@ class ParcelController extends Controller
             // dd($id);
           $parcels=Parcel::find($id);
          $parcels->update([
-            'name'=>$request->name,
-                'address'=>$request->address,
-                'receiver'=>$request->receiver,
-                'rec_address'=>$request->rec_address,
-                'contact'=>$request->contact,
-                'type'=>$request->type,
+            'status'=>$request->status,
 
 
             ]);
-             return redirect()->back()->with('success-message', 'Update Created Successfully.');
+             return redirect()->route('parcel.details')->with('success-message', 'Update Created Successfully.');
         }
 
         public function delete($id)

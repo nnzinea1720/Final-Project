@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParcelsTable extends Migration
+class CreateCustomersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,19 @@ class CreateParcelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('parcels', function (Blueprint $table) {
+        Schema::create('customers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address');
-            $table->string('receiver');
+            $table->string('cust_name');
+            $table->string('cust_contact');
+            $table->string('cust_address');
+            $table->string('rec_name');
+            $table->string('rec_phone');
             $table->string('rec_address');
-            $table->string('contact');
-            $table->string('delivery_area');
-            $table->string('weight');
-            $table->string('total_cost');
+            $table->string('branch_name');
             $table->string('type');
+            $table->string('price');
             $table->string('date');
-            $table->string('status')->default('pending');
+            $table->string('time');
             $table->timestamps();
         });
     }
@@ -37,6 +37,6 @@ class CreateParcelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parcels');
+        Schema::dropIfExists('customers');
     }
 }

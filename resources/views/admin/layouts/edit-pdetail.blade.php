@@ -18,33 +18,17 @@
                 <form action="{{route('parcel.update',$parcels->id)}}" method="post">
                     @method('put')
                     @csrf
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Name</label>
-                        <input value="{{$parcels->name}}" type="text" class="form-control" id="fname" name="name" placeholder="Enter your Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Address</label>
-                        <input value="{{$parcels->address}}" type="text" class="form-control" id="fname" name="address" placeholder="Enter your Address">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Reciever</label>
-                        <input value="{{$parcels->receiver}}" type="text" class="form-control" id="fname" name="receiver" placeholder="Enter your Reciever">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Rec Add</label>
-                        <input value="{{$parcels->rec_address}}" type="text" class="form-control" id="fname" name="rec_address" placeholder="Enter your Rec Add">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Contact</label>
-                        <input value="{{$parcels->contact}}" type="text" class="form-control" id="fname" name="contact" placeholder="Enter your Contact">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Type</label>
-                        <input value="{{$parcels->type}}" type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
-                    </div>
 
-                    <button type="submit" class="btn btn-default">Submit</button>
-                    <button type="submit" class="btn btn-default">Reset</button>
+                        <label for="inputState">State</label>
+                        <select id="inputState" name="status"class="form-control">
+                          <option selected>Select Your Option</option>
+                          <option value="approve">Approve</option>
+                          <option value="cancel">Cancel</option>
+                        </select>
+                        <br>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
                 </form>
             </div>
         </div>

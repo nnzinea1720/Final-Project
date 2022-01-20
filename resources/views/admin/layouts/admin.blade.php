@@ -41,7 +41,7 @@
 
 
 
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
                     {{-- <button type="submit" class="btn btn-default">Reset</button> --}}
                 </form>
             </div>

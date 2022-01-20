@@ -64,13 +64,13 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        {{-- <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="about.html">About Us</a></li>
 
                             </ul>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Notice <i class="fa fa-angle-down"></i></a>
@@ -87,11 +87,15 @@
                             </ul>
                         </li>
 
+                        <li class="nav-item"><a class="nav link" href="{{route('user.booking.parcel')}}">Booking Parcel</a></li>
 
-
+                        <li class="nav-item"><a class="nav-link" href="Profile.html">Profile</a></li>
 
 
                         <li class="nav-item"><a class="nav-link" href="{{route('user.contact')}}">Contact</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="about us.html"> About Us</a></li>
+
                     </ul>
 
 

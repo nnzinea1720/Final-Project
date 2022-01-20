@@ -8,12 +8,16 @@ use App\Http\Controllers\Backend\StaffController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\ParcelController;
+use App\Http\Controllers\Backend\TrackController;
+use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\frontend\UserController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\frontend\ServiceController;
 use App\Http\Controllers\frontend\NoticeController;
-use App\Http\Controllers\Backend\TrackController;
+use App\Http\Controllers\frontend\BookingController;
+use App\Http\Controllers\frontend\ProfileController;
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -51,7 +55,9 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::post('/Contact',[ContactController::class,'contact'])->name('user.contact');
     Route::get('/Notice board',[NoticeController::class,'notice'])->name('user.notice.board');
     Route::get('/Our Services',[ServiceController::class,'service'])->name('user.our.services');
-
+    Route::get('/Booking Parcel',[BookingController::class,'booking'])->name('user.booking.parcel');
+    Route::post('/Booking Parcel',[BookingController::class,'booking'])->name('user.booking.parcel');
+    Route::get('/Profile',[ProfileController::class,'profile'])->name('user.profile');
 
 
 
@@ -137,6 +143,13 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
 
      Route::get('/admin',[AdminController::class,'adminForm'])->name('admin.form');
      Route::post('/admin',[AdminController::class,'store'])->name('admin.store');
+
+    // Customer
+
+    Route::get('/customer/customer-info',[CustomerController::class,'create'])->name('customer.create');
+    Route::post('/customer/customer-info',[CustomerController::class,'store'])->name('customer.store');
+    Route::get('/customer/customer-list',[CustomerController::class,'list'])->name('customer.list');
+
 
 
 

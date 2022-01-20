@@ -269,15 +269,15 @@
 
 
             <li>
-                <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                <a href="customer.html"><i class="fa fa-sitemap"></i> Customer<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">Second Level Link</a>
+                        <a href="{{route('customer.create')}}"> Customer Information</a>
                     </li>
                     <li>
-                        <a href="#">Second Level Link</a>
+                        <a href="{{route('customer.list')}}"> Customer List</a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="#">Second Level Link<span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
                             <li>
@@ -292,7 +292,7 @@
 
                         </ul>
 
-                    </li>
+                    </li> --}}
                 </ul>
             </li>
             <li>
