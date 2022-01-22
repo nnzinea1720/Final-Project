@@ -16,6 +16,7 @@ use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\frontend\ServiceController;
 use App\Http\Controllers\frontend\NoticeController;
 use App\Http\Controllers\frontend\BookingController;
+use App\Http\Controllers\frontend\InformationController;
 use App\Http\Controllers\frontend\ProfileController;
 
 
@@ -58,6 +59,8 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::get('/Booking Parcel',[BookingController::class,'booking'])->name('user.booking.parcel');
     Route::post('/Booking Parcel',[BookingController::class,'booking'])->name('user.booking.parcel');
     Route::get('/Profile',[ProfileController::class,'profile'])->name('user.profile');
+    Route::get('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
+    Route::post('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
 
 
 
@@ -119,6 +122,7 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
     Route::get('/branch/branch-list/Edit/{id}',[BranchController::class,'edit'])->name('branch.edit');
     Route::put('/branch/branch-list/update/{id}',[BranchController::class,'update'])->name('branch.update');
 
+    // Staff
     Route::get('/branch/add-staff',[StaffController::class,'create'])->name('staff.create');
     Route::post('/branch/add-staff',[StaffController::class,'store'])->name('staff.store');
     Route::get('/branch/staff-list',[StaffController::class,'list'])->name('staff.list');
@@ -133,8 +137,8 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
 
      Route::get('/parcel-details/View/{id}',[ParcelController::class,'view'])->name('parcel.view');
      Route::get('/parcel/parcel-details/Edit/{id}',[ParcelController::class,'edit'])->name('parcel.edit');
-    Route::put('/parcel/parcel-details/update/{id}',[ParcelController::class,'update'])->name('parcel.update');
-    Route::get('/parcel/parcel-details/Delete/{id}',[ParcelController::class,'delete'])->name('parcel.delete');
+     Route::put('/parcel/parcel-details/update/{id}',[ParcelController::class,'update'])->name('parcel.update');
+     Route::get('/parcel/parcel-details/Delete/{id}',[ParcelController::class,'delete'])->name('parcel.delete');
 
      //  Track
 
@@ -149,6 +153,12 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
     Route::get('/customer/customer-info',[CustomerController::class,'create'])->name('customer.create');
     Route::post('/customer/customer-info',[CustomerController::class,'store'])->name('customer.store');
     Route::get('/customer/customer-list',[CustomerController::class,'list'])->name('customer.list');
+
+    Route::get('/customer/customer-list/Delete/{id}',[CustomerController::class,'delete'])->name('customer.delete');
+    Route::get('/customer/customer-list/Edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
+    Route::put('/customer/customer-list/Update/{id}',[CustomerController::class,'update'])->name('customer.update');
+    Route::get('/customer/customer-list/View/{id}',[CustomerController::class,'view'])->name('customer.view');
+
 
 
 

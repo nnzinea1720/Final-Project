@@ -21,7 +21,8 @@
     @endif
 
     <h1></h1>
-    <a href="{{route('customer.create')}}" class="btn btn-success">Create New Customer</a>
+    <br>
+    <a href="{{route('customer.create')}}" class="btn btn-danger">Create New Customer</a>
 
 
 
@@ -71,7 +72,11 @@
                 <td>{{$customer->price}}</td>
                 {{-- <td>{{$customer->date}}</td> --}}
                 {{-- <td>{{$customer->time}}</td> --}}
-
+                <td>
+                    <a class="btn btn-danger" href="{{route('customer.delete',$customer->id)}}"> Delete</a>
+                    <a class="btn btn-info" href="{{route('customer.edit',$customer->id)}}"> Edit</a>
+                    <a class="btn btn-warning" href="{{route('customer.view',$customer->id)}}"> View</a>
+                </td>
 
             </tr>
             @endforeach

@@ -30,18 +30,18 @@
                         <input type="mobile" class="form-control" id="fname" name="mobile" placeholder="Enter your Mobile">
                     </div>
                      <div class="form-group">
-    <label for="exampleFormControlSelect1">Role</label>
-    <select class="form-control" name="role" id="exampleFormControlSelect1">
-      <option>select option</option>
-      <option>Admin</option>
-      <option>User</option>
-      <option>Branch Admin</option>
-    </select>
-  </div>
+                        <label for="exampleFormControlSelect1">Role</label>
+                       <select class="form-control" name="role" id="exampleFormControlSelect1">
+                               <option>select option</option>
+                               <option>Admin</option>
+                               <option>User</option>
+                               <option>Branch Admin</option>
+                       </select>
+                     </div>
 
 
 
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                     {{-- <button type="submit" class="btn btn-default">Reset</button> --}}
                 </form>
             </div>

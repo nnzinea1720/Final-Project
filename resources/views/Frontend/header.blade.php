@@ -73,9 +73,11 @@
                         </li> --}}
 
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Notice <i class="fa fa-angle-down"></i></a>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Information <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                              <li><a href="{{route('user.notice.board')}}">Notice Board</a></li>
+                                <li><a href="{{route('user.customer.information')}}"> Customer Information</a></li>
+                                <li><a href="Branch_info.html">Branch Information </a></li>
+                              <li><a href="{{route('user.notice.board')}}">Notice </a></li>
                             </ul>
                         </li>
 

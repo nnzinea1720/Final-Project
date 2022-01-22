@@ -39,10 +39,26 @@ class ParcelController extends Controller
 
         public function store(Request $request)
         {
+            // dd($request->all());
+
+            $image=null;
+            //              step 1: check image exist in this request.
+                             if($request->hasFile('image'))
+                             {
+                                 // step 2: generate file name
+                                 $image=date('Ymdhis') .'.'. $request->file('image')->getClientOriginalExtension();
+            // dd($image_name);
+                                 //step 3 : store into project directory
+
+                                 $request->file('image')->storeAs('/uploads/parcels',$image);
+
+                             }
+
             Parcel::create([
 
                     'name'=>$request->name,
                     'address'=>$request->address,
+                    // 'phone'=>$request->phone,
                     'receiver'=>$request->receiver,
                     'rec_address'=>$request->rec_address,
                     'contact'=>$request->contact,
@@ -50,6 +66,7 @@ class ParcelController extends Controller
                     'weight'=>$request->weight,
                     'total_cost'=>$request->total_cost,
                     'type'=>$request->type,
+                    'image'=>$request->image,
                     'date'=>$request->date,
 
 
@@ -57,7 +74,6 @@ class ParcelController extends Controller
 
 
             ]);
-            return redirect()->back();
         }
 
         public function view($id)

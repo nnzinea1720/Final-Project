@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <h1>
@@ -83,8 +84,8 @@
                             </div>
                         </div>
                     </div>
-                     <br>
-                    <button type="submit" class="btn btn-outline-danger">Book Now</button>
+
+                    <button type="submit" class="btn btn-primary">Book Now</button>
 
                 </form>
             </div>

@@ -20,6 +20,7 @@
 
 
 <h1></h1>
+<br>
 <a href="{{route('branch.create')}}" class="btn btn-success">Create new branch list</a>
 
 <!-- <------Search----->

@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="panel-body">
-                <form action="" method="post">
+                <form action="" method="post"  enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
@@ -25,6 +25,10 @@
                         <label for="exampleInputPassword1">Address</label>
                         <input type="text" class="form-control" id="fname" name="address" placeholder="Enter your Address">
                     </div>
+                    {{-- <div class="form-group">
+                        <label for="exampleInputPassword1">Phone </label>
+                        <input type="phone" class="form-control" id="fname" name="phone" placeholder="Enter your phone">
+                    </div> --}}
                     <div class="form-group">
                         <label for="exampleInputPassword1">Reciever</label>
                         <input type="text" class="form-control" id="fname" name="receiver" placeholder="Enter your Reciever">
@@ -52,6 +56,10 @@
                     <div class="form-group">
                         <label for="exampleInputPassword1">Type</label>
                         <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Image</label>
+                        <input name="image/png" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Booking Date</label>

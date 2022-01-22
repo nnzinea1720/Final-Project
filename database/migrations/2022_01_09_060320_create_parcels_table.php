@@ -17,6 +17,7 @@ class CreateParcelsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
+            // $table->string('phone');
             $table->string('receiver');
             $table->string('rec_address');
             $table->string('contact');
@@ -24,6 +25,7 @@ class CreateParcelsTable extends Migration
             $table->string('weight');
             $table->string('total_cost');
             $table->string('type');
+            $table->string('image');
             $table->string('date');
             $table->string('status')->default('pending');
             $table->timestamps();

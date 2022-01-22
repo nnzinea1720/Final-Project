@@ -30,10 +30,12 @@
         <th scope="col">#</th>
         <th scope="col">name</th>
         <th scope="col">Address</th>
+        {{-- <th scope="col">Phone</th> --}}
         <th scope="col">Receiver</th>
         <th scope="col">Receiver Address</th>
          <th scope="col">Contact</th>
          <th scope="col">Type</th>
+         <th scope="col">Image</th>
          <th scope="col">Status</th>
         <th scope="col">Action</th>
     </tr>
@@ -46,10 +48,15 @@
         <th scope="row">{{$key+1}}</th>
         <td>{{$list->name}}</td>
         <td>{{$list->address}}</td>
+        {{-- <td>{{$list->phone}}</td> --}}
         <td>{{$list->receiver}}</td>
         <td>{{$list->rec_address}}</td>
         <td>{{$list->contact}}</td>
         <td>{{$list->type}}</td>
+        <th>
+            <img style="border-radius: 4px;" width="100px;" src=" {{url('/uploads/parcels/'.$list->image)}}" alt="image">
+
+        </th>
         <td>{{$list->status}}</td>
         <td>
             <a class="btn btn-success" href="{{route('parcel.view',$list->id)}}"> View</a>

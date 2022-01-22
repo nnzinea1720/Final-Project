@@ -21,8 +21,8 @@
 
 
 <h1></h1>
-
-<a href="" class="btn btn-success">Create new staff list</a>
+<br>
+<a href="{{route('staff.create')}}" class="btn btn-success">Create new staff list</a>
 
 <table class="table">
     <thead>
