@@ -91,7 +91,7 @@
 
                         <li class="nav-item"><a class="nav link" href="{{route('user.booking.parcel')}}">Booking Parcel</a></li>
 
-                        <li class="nav-item"><a class="nav-link" href="Profile.html">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('user.profile')}}">Profile</a></li>
 
 
                         <li class="nav-item"><a class="nav-link" href="{{route('user.contact')}}">Contact</a></li>

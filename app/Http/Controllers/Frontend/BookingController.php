@@ -16,21 +16,22 @@ class BookingController extends Controller
     {
 
 
-       dd($request->all());
+    //    dd($request->all());
         Bookingparcel::create([
 
             'name'=>$request->name,
             'address'=>$request->address,
+            'phone'=>$request->phone,
+            'weight'=>$request->weight,
+            'type'=>$request->type,
+            'date'=>$request->date,
             'receiver'=>$request->receiver,
             'rec_address'=>$request->rec_address,
             'contact'=>$request->contact,
             'delivery_area'=>$request->delivery_area,
-            'weight'=>$request->weight,
             'total_cost'=>$request->total_cost,
-            'type'=>$request->type,
-            'date'=>$request->date,
 
         ]);
-        return redirect()->back();
+         return redirect()->back();
     }
 }

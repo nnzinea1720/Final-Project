@@ -9,6 +9,6 @@ class ProfileController extends Controller
 {
     public function profile()
     {
-        return view('');
+        return view('frontend.partials.profile');
     }
 }

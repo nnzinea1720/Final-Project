@@ -57,7 +57,7 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::get('/Notice board',[NoticeController::class,'notice'])->name('user.notice.board');
     Route::get('/Our Services',[ServiceController::class,'service'])->name('user.our.services');
     Route::get('/Booking Parcel',[BookingController::class,'booking'])->name('user.booking.parcel');
-    Route::post('/Booking Parcel',[BookingController::class,'booking'])->name('user.booking.parcel');
+    Route::post('/Booking Parcel',[BookingController::class,'store'])->name('user.booking.store');
     Route::get('/Profile',[ProfileController::class,'profile'])->name('user.profile');
     Route::get('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
     Route::post('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
@@ -145,8 +145,15 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
      Route::get('/track',[TrackController::class,'create'])->name('track.create');
      Route::post('/track',[TrackController::class,'store'])->name('track.store');
 
+    //  Admin
+
      Route::get('/admin',[AdminController::class,'adminForm'])->name('admin.form');
      Route::post('/admin',[AdminController::class,'store'])->name('admin.store');
+     Route::get('admin/user-list',[AdminController::class,'list'])->name('user.list');
+
+     Route::get('/admin/user-list/Delete/{id}',[AdminController::class,'delete'])->name('user.delete');
+     Route::get('admin/user-list/View/{id}',[AdminController::class,'view'])->name('user.view');
+     Route::get('admin/search',[AdminController::class,'show'])->name('user.show');
 
     // Customer
 

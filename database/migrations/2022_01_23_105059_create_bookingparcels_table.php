@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParcelsTable extends Migration
+class CreateBookingparcelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,19 @@ class CreateParcelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('parcels', function (Blueprint $table) {
+        Schema::create('bookingparcels', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('address');
             $table->string('phone');
+            $table->string('weight');
+            $table->string('type');
+            $table->string('date');
             $table->string('receiver');
             $table->string('rec_address');
             $table->string('contact');
             $table->string('delivery_area');
-            $table->string('weight');
             $table->string('total_cost');
-            $table->string('type');
-            $table->string('image');
-            $table->string('date');
-            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
@@ -39,6 +37,6 @@ class CreateParcelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parcels');
+        Schema::dropIfExists('bookingparcels');
     }
 }

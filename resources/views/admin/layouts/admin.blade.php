@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="panel-body">
-                <form action="" method="post">
+                <form action="{{route('admin.store')}}" method="post">
                     @csrf
                     <div class="form-group">
                         <label for="Enter User Name">Name </label>

@@ -43,14 +43,14 @@ class ParcelController extends Controller
 
             $image=null;
             //              step 1: check image exist in this request.
-                             if($request->hasFile('image'))
+                             if($request->hasFile('image/png'))
                              {
                                  // step 2: generate file name
-                                 $image=date('Ymdhis') .'.'. $request->file('image')->getClientOriginalExtension();
+                                 $image=date('Ymdhis') .'.'. $request->file('image/png')->getClientOriginalExtension();
             // dd($image_name);
                                  //step 3 : store into project directory
 
-                                 $request->file('image')->storeAs('/uploads/parcels',$image);
+                                 $request->file('image/png')->storeAs('/uploads/parcels',$image);
 
                              }
 
@@ -58,7 +58,7 @@ class ParcelController extends Controller
 
                     'name'=>$request->name,
                     'address'=>$request->address,
-                    // 'phone'=>$request->phone,
+                    'phone'=>$request->phone,
                     'receiver'=>$request->receiver,
                     'rec_address'=>$request->rec_address,
                     'contact'=>$request->contact,
@@ -66,14 +66,10 @@ class ParcelController extends Controller
                     'weight'=>$request->weight,
                     'total_cost'=>$request->total_cost,
                     'type'=>$request->type,
-                    'image'=>$request->image,
+                    'image'=>$image,
                     'date'=>$request->date,
-
-
-
-
-
             ]);
+            return redirect()->route('parcel.details');
         }
 
         public function view($id)

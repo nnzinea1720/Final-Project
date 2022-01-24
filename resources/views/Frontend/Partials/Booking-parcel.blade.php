@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="panel-body">
-                <form action="" method="post">
+                <form action="{{route('user.booking.store')}}" method="post">
                  @csrf
 
                  <div class="row">
@@ -42,10 +42,10 @@
                             <label for="exampleInputPassword1">Address</label>
                             <input type="text" class="form-control" id="fname" name="address" placeholder="Enter your Address">
                         </div>
-                        {{-- <div class="form-group">
+                        <div class="form-group">
                             <label for="exampleInputPassword1">Phone</label>
-                            <input type="number" class="form-control" id="fname" name="contact" placeholder="Enter your Contact">
-                        </div> --}}
+                            <input type="number" class="form-control" id="fname" name="phone" placeholder="Enter your Contact">
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Weight</label>
                             <input type="text" class="form-control" id="fname" name="weight" placeholder="Enter your Weight">

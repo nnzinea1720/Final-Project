@@ -11,3 +11,9 @@ class Parcel extends Model
     protected $table='parcels';
     protected $guarded=[];
 }
+// {
+//    public function list()
+//    {
+//             return $this->belongsto (ParcelController::class,'parcel list', 'id');
+//     }
+// }

@@ -4,13 +4,9 @@
 
 
 @section('content')
-{{-- <br>
-<form class="print_order">
-    <input class="btn btn-primary" type="button" onClick="PrintDiv();" value="Print">
-</form>
 
-<div id="divToPrint"> --}}
-
+    <div id="divToPrint">
+        <br>
          <h1>Parcel Details </h1>
 
 
@@ -23,26 +19,24 @@
          <P>weight: {{$parcel->weight}}</P>
          <P>total_cost: {{$parcel->total_cost}}</P>
          <P>type: {{$parcel->type}}</P>
+         <P> <img style="border-radius: 4px;" width="100px;" src=" {{url('/uploads/parcels/'.$parcel->image)}}" alt="image"></P>
          <P>date: {{$parcel->date}}</P>
 
-
-         <form class="print_order">
-            <input class="btn btn-primary" type="button" onClick="PrintDiv();" value="Print">
-        </form>
-
-        <div id="divToPrint">
+     </div>
+     <br>
+        <input class="btn btn-danger" type="button" onClick="PrintDiv('divToPrint');" value="Print">
 
 
 
 @endsection
 
 <script language="javascript">
-    function PrintDiv() {
-        var divToPrint = document.getElementById('divToPrint');
-        var popupWin = window.open('', '_blank', 'width=1100,height=700');
-        popupWin.document.open();
-        popupWin.document.write('<html><head><link href="http://127.0.0.1:8000/Backend/css/style.css" rel="stylesheet"></head><body onload="window.print()">' + divToPrint.innerHTML + '</html>');
-        popupWin.document.close();
+    function PrintDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
     }
 </script>
 

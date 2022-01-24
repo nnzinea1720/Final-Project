@@ -25,10 +25,10 @@
                         <label for="exampleInputPassword1">Address</label>
                         <input type="text" class="form-control" id="fname" name="address" placeholder="Enter your Address">
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label for="exampleInputPassword1">Phone </label>
                         <input type="phone" class="form-control" id="fname" name="phone" placeholder="Enter your phone">
-                    </div> --}}
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Reciever</label>
                         <input type="text" class="form-control" id="fname" name="receiver" placeholder="Enter your Reciever">
@@ -43,7 +43,13 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Delivery Area</label>
-                        <input type="text" class="form-control" id="fname" name="delivery_area" placeholder="Enter your Delivery Area">
+                        <select class="form-control" name="delivery_area" id="fname">
+                            <option>select option</option>
+                            <option>Inside Dhaka</option>
+                            <option>Outside Dhaka</option>
+                    </select>
+                        {{-- <input type="text" class="form-control" id="fname" name="delivery_area" placeholder="Enter your Delivery Area"> --}}
+
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Weight</label>
@@ -55,7 +61,14 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Type</label>
-                        <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
+                        <select class="form-control" name="role" id="exampleFormControlSelect1">
+                            <option>select option</option>
+                            <option>Book </option>
+                            <option>Dress </option>
+                            <option>Ornaments </option>
+                            <option>others </option>
+                    </select>
+                        {{-- <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type"> --}}
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Image</label>
