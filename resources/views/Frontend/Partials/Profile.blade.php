@@ -311,8 +311,8 @@ textarea:hover {
 
           </div>
         </div>
-        <ul class="text">Walter Wright</ul>
-        <div class="text1">HTML + CSS</div>
+        <ul class="text">Courier Service</ul>
+        <div class="text1">Profile</div>
 
 
 
@@ -321,22 +321,22 @@ textarea:hover {
     <div class="panel panel-default">
       <div class="panel-heading " role="tab" id="headingOne">
         <h4 class="panel-title ">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="" aria-controls="collapseOne">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="collapseOne.About.html" aria-expanded="" aria-controls="collapseOne">
             <div class="title  btn btn-danger btn-outline btn-lg">ABOUT </div>
           </a>
         </h4>
       </div>
       <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body">
-          Walter has been building websites for years. He enjoys making unique websites and web projects. His hobbies include photography, woodworking, leatherworking, fishing, and mid century modern furniture.
+          {{-- Walter has been building websites for years. He enjoys making unique websites and web projects. His hobbies include photography, woodworking, leatherworking, fishing, and mid century modern furniture. --}}
         </div>
       </div>
     </div>
-    <div class="panel panel-default">
+    {{-- <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="headingTwo">
         <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <div class="title btn btn-danger btn-outline btn-lg">Click Now</div>
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#" aria-expanded="false" aria-controls="collapseTwo">
+            <div class="title btn btn-danger btn-outline btn-lg">Contact</div>
           </a>
         </h4>
       </div>
@@ -345,12 +345,34 @@ textarea:hover {
           Walter has been building websites for years. He enjoys making unique websites and web projects. His hobbies include photography, woodworking, leatherworking, fishing, and mid century modern furniture.
         </div>
       </div>
-    </div>
+    </div> --}}
     <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="headingThree">
+        <div class="card-body">
+            <form action="{{route('user.update.store')}}" method="post" enctype="multipart/form-data">
+              {{-- @method("PUT") --}}
+              @csrf
+              <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="fname" name="email" placeholder="Enter Your Email">
+                  </div>
+                  <div class="form-group">
+                      <label for="exampleFormControlInput1">Phone </label>
+                      <input type="phone" class="form-control" id="fname" name="phone" placeholder="Enter Your Phone Number">
+                    </div>
+
+
+            <div class="text-left">
+                <br>
+              <button class="btn btn-warning solid blank" type="submit">Submit</button>
+            </div>
+          </form>
+
+        </div>
         <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <div class="title btn btn-danger btn-outline btn-lg">CONTACT</div>
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="{{route('user.update.store')}}" aria-expanded="false" aria-controls="collapseThree">
+            <div class="title btn btn-danger btn-outline btn-lg">Edit Profile</div>
           </a>
         </h4>
       </div>

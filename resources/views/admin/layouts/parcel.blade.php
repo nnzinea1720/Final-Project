@@ -60,15 +60,16 @@
                         <input type="text" class="form-control" id="fname" name="total_cost" placeholder="Enter your Contact">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Type</label>
-                        <select class="form-control" name="role" id="exampleFormControlSelect1">
+                        <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
+                        {{-- <label for="exampleInputPassword1">Type</label> --}}
+                        {{-- <select class="form-control" name="type" id="exampleFormControlSelect1">
                             <option>select option</option>
                             <option>Book </option>
                             <option>Dress </option>
                             <option>Ornaments </option>
                             <option>others </option>
-                    </select>
-                        {{-- <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type"> --}}
+                    </select> --}}
+
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Image</label>

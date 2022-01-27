@@ -86,7 +86,7 @@
           <div class="row align-items-center h-100">
               <div class="col-md-12 text-center">
                 <h2 class="slide-title" data-animation-in="slideInLeft">17 Years of excellence in</h2>
-                <h3 class="slide-sub-title" data-animation-in="slideInRight">Construction Industry</h3>
+                <h3 class="slide-sub-title" data-animation-in="slideInRight">Courier Service</h3>
                 <p data-animation-in="slideInLeft" data-duration-in="1.2">
                     <a href="services.html" class="slider btn btn-primary">Our Services</a>
                     <a href="contact.html" class="slider btn btn-primary border">Contact Now</a>
@@ -119,7 +119,7 @@
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12">
-                <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Engineers</h2>
+                <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Staffs</h2>
                 <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
                 <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that determines how you achieve success.</p>
                 <div data-animation-in="slideInLeft">

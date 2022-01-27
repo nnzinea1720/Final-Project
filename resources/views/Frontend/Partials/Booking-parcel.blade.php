@@ -75,6 +75,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Delivery Area</label>
+                                {{-- <select class="form-control" name="delivery_area" id="fname">
+                                    <option>select option</option>
+                                    <option>Inside Dhaka</option>
+                                    <option>Outside Dhaka</option>
+                            </select> --}}
                                 <input type="text" class="form-control" id="fname" name="delivery_area" placeholder="Enter your Delivery Area">
                             </div>
                             <div class="form-group">

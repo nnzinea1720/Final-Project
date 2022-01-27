@@ -18,6 +18,7 @@ use App\Http\Controllers\frontend\NoticeController;
 use App\Http\Controllers\frontend\BookingController;
 use App\Http\Controllers\frontend\InformationController;
 use App\Http\Controllers\frontend\ProfileController;
+use App\Http\Controllers\frontend\UpdateController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -51,17 +52,28 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::post('/registration',[UserController::class,'registration'])->name('user.registration');
     Route::post('/login',[UserController::class,'login'])->name('user.login');
     Route::get('/logout',[UserController::class,'logout'])->name('user.logout');
+
     Route::get('/home one',[HomeController::class,'home'])->name('user.home.one');
-    Route::get('/Contact',[ContactController::class,'contact'])->name('user.contact');
+
+    Route::get('/Contact',[ContactController::class,'create'])->name('user.contact');
     Route::post('/Contact',[ContactController::class,'contact'])->name('user.contact');
+
     Route::get('/Notice board',[NoticeController::class,'notice'])->name('user.notice.board');
+
     Route::get('/Our Services',[ServiceController::class,'service'])->name('user.our.services');
+
     Route::get('/Booking Parcel',[BookingController::class,'booking'])->name('user.booking.parcel');
     Route::post('/Booking Parcel',[BookingController::class,'store'])->name('user.booking.store');
-    Route::get('/Profile',[ProfileController::class,'profile'])->name('user.profile');
-    Route::get('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
-    Route::post('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
 
+    Route::get('/Profile',[ProfileController::class,'profile'])->name('user.profile');
+
+    Route::get('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
+    Route::post('/Customer Information',[InformationController::class,'store'])->name('user.customer.store');
+
+    Route::get('/Update',[UpdateController::class,'update'])->name('user.update');
+    Route::post('/Update',[UpdateController::class,'store'])->name('user.update.store');
+    // Route::get('/Update/actual/',[UpdateController::class,'actual_update'])->name('user.update.actual');
+    // Route::get('/Update',[UpdateController::class,'show'])->name('user.update.show');
 
 
 

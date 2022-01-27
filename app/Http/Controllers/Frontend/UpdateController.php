@@ -1,29 +1,29 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
-
+use App\Models\Update;
 use App\Http\Controllers\Controller;
-use App\Models\Contact;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class UpdateController extends Controller
 {
-    public function create()
+    public function update()
     {
-        return view ('frontend.partials.contact');
+        return view('frontend.partials.Update');
     }
 
-    public function contact(Request $request)
+
+
+    public function store(Request $request)
     {
 
 
     //    dd($request->all());
-        Contact::create([
-            'name'=>$request->name,
+        update::create([
             'email'=>$request->email,
             'phone'=>$request->phone,
-            'message'=>$request->message,
         ]);
          return redirect()->back();
     }
 }
+

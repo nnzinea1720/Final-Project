@@ -17,7 +17,7 @@ class BookingController extends Controller
 
 
     //    dd($request->all());
-        Bookingparcel::create([
+        bookingparcel::create([
 
             'name'=>$request->name,
             'address'=>$request->address,

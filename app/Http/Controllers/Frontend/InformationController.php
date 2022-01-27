@@ -18,16 +18,17 @@ class InformationController extends Controller
        //dd($request->all());
         Information::create([
 
-            'name'=>$request->name,
-            'address'=>$request->address,
-            'receiver'=>$request->receiver,
-            'rec_address'=>$request->rec_address,
+            'cust_name'=>$request->cust_name,
             'contact'=>$request->contact,
-            'delivery_area'=>$request->delivery_area,
-            'weight'=>$request->weight,
-            'total_cost'=>$request->total_cost,
+            'cust_address'=>$request->cust_address,
+            'branch_name'=>$request->branch_name,
             'type'=>$request->type,
+            'price'=>$request->price,
+            'rec_name'=>$request->rec_name,
+            'phone'=>$request->phone,
+            'rec_address'=>$request->rec_address,
             'date'=>$request->date,
+            'time'=>$request->time,
 
         ]);
         return redirect()->back();
