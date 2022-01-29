@@ -255,14 +255,22 @@
                     </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#"><i class="fa fa-sitemap"></i> Parcel<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
 
-            <li>
-                <a href="{{route('parcel.create')}}"><i class="fa fa-qrcode"></i> Parcel</a>
-            </li>
+                          <li>
+                             <a href="{{route('parcel.create')}}"><i class="fa fa-qrcode"></i> Parcel</a>
+                         </li>
 
-            <li>
-                <a href="{{route('parcel.details')}}"><i class="fa fa-table"></i> Parcel Details</a>
-            </li>
+                          <li>
+                             <a href="{{route('parcel.details')}}"><i class="fa fa-table"></i> Parcel Details</a>
+                         </li>
+                         <li>
+                            <a href="{{route('booking.parcel.list')}}"><i class="fa fa-table"></i> Booking Parcel</a>
+                        </li>
+                    </ul>
+                </li>
             <li>
                 <a href="{{route('track.create')}}"><i class="fa fa-edit"></i> Tracking </a>
             </li>

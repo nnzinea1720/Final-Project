@@ -32,8 +32,8 @@ class ParcelController extends Controller
 
         public function details()
         {
-           $details= Parcel::all();
-            return view('admin.layouts.parcel-detail',compact('details'));
+           $lists= Parcel::all();
+            return view('admin.layouts.parcel-detail',compact('lists'));
         }
 
 
@@ -108,9 +108,6 @@ class ParcelController extends Controller
           $parcels->delete();
          return redirect()->back()->with('success-message','Branch Created Successfully.');
         }
-
-
-
 
 
 

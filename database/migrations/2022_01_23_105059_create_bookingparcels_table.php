@@ -20,12 +20,14 @@ class CreateBookingparcelsTable extends Migration
             $table->string('phone');
             $table->string('weight');
             $table->string('type');
+            $table->string('image');
             $table->string('date');
             $table->string('receiver');
             $table->string('rec_address');
             $table->string('contact');
             $table->string('delivery_area');
             $table->string('total_cost');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

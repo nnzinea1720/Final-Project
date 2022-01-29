@@ -60,6 +60,7 @@
                         <input type="text" class="form-control" id="fname" name="total_cost" placeholder="Enter your Contact">
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputPassword1">Type</label>
                         <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
                         {{-- <label for="exampleInputPassword1">Type</label> --}}
                         {{-- <select class="form-control" name="type" id="exampleFormControlSelect1">

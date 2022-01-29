@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="panel-body">
-                <form action="{{route('user.booking.store')}}" method="post">
+                <form action="{{route('user.booking.store')}}" method="post" enctype="multipart/form-data">
                  @csrf
 
                  <div class="row">
@@ -52,12 +52,21 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Type</label>
-                            <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
+                            <select class="form-control" name="type" id="fname">
+                                <option>select option</option>
+                                <option>Book</option>
+                                <option>Dress</option>
+                                <option>Ornaments</option>
+                                <option>Others</option>
+                        </select>
+                            {{-- <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type"> --}}
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Booking Date</label>
-                            <input type="date" class="form-control" id="fname" name="date" placeholder="Enter your Date">
+                            <label for="exampleInputPassword1">Image</label>
+                            <input name="image/png" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
+
+
 
                      </div>
                         <div class="col">
@@ -75,16 +84,20 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Delivery Area</label>
-                                {{-- <select class="form-control" name="delivery_area" id="fname">
+                                <select class="form-control" name="delivery_area" id="fname">
                                     <option>select option</option>
                                     <option>Inside Dhaka</option>
                                     <option>Outside Dhaka</option>
-                            </select> --}}
-                                <input type="text" class="form-control" id="fname" name="delivery_area" placeholder="Enter your Delivery Area">
+                            </select>
+                                {{-- <input type="text" class="form-control" id="fname" name="delivery_area" placeholder="Enter your Delivery Area"> --}}
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Total Cost</label>
                                 <input type="number" class="form-control" id="fname" name="total_cost" placeholder="Enter your Total Cost">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Booking Date</label>
+                                <input type="date" class="form-control" id="fname" name="date" placeholder="Enter your Date">
                             </div>
                         </div>
                     </div>

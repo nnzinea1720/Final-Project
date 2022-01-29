@@ -42,7 +42,7 @@
     </thead>
     <tbody>
 
-        @foreach($details as $key=>$list)
+        @foreach($lists as $key=>$list)
 
     <tr>
         <th scope="row">{{$key+1}}</th>

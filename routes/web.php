@@ -70,8 +70,8 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::get('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
     Route::post('/Customer Information',[InformationController::class,'store'])->name('user.customer.store');
 
-    Route::get('/Update',[UpdateController::class,'update'])->name('user.update');
-    Route::post('/Update',[UpdateController::class,'store'])->name('user.update.store');
+    Route::get('/Update/{id}',[UpdateController::class,'update'])->name('user.update');
+    Route::put('/Update/{id}',[UpdateController::class,'store'])->name('user.update.store');
     // Route::get('/Update/actual/',[UpdateController::class,'actual_update'])->name('user.update.actual');
     // Route::get('/Update',[UpdateController::class,'show'])->name('user.update.show');
 
@@ -98,8 +98,7 @@ Route::post('/admin-portal/login',[LoginController::class,'doLogin'])->name('adm
 
 
 
-
-Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
+Route::group(['prefix'=>'admin-portal','middleware'=>['auth','login']],function(){
     // Route::get('/', function () {
     //     return view('admin.layouts.home');
     // })->name('admin');
@@ -152,6 +151,13 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
      Route::put('/parcel/parcel-details/update/{id}',[ParcelController::class,'update'])->name('parcel.update');
      Route::get('/parcel/parcel-details/Delete/{id}',[ParcelController::class,'delete'])->name('parcel.delete');
 
+
+     Route::get('/booking parcel',[BookingController::class,'view'])->name('booking.parcel.list');
+
+     Route::get('/booking parcel/approve/{id}',[BookingController::class,'edit'])->name('booking.parcel.approve');
+     Route::put('/booking parcel/approve/{id}',[BookingController::class,'update'])->name('booking.parcel.update');
+     Route::get('/booking parcel/search',[BookingController::class,'show'])->name('booking.parcel.show');
+
      //  Track
 
      Route::get('/track',[TrackController::class,'create'])->name('track.create');
@@ -177,15 +183,6 @@ Route::group(['prefix'=>'admin-portal','middleware'=>'auth'],function(){
     Route::get('/customer/customer-list/Edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
     Route::put('/customer/customer-list/Update/{id}',[CustomerController::class,'update'])->name('customer.update');
     Route::get('/customer/customer-list/View/{id}',[CustomerController::class,'view'])->name('customer.view');
-
-
-
-
-
-
-
-
-
 
 
 

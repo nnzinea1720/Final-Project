@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
-use App\Models\Update;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,14 +14,17 @@ class UpdateController extends Controller
 
 
 
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
 
 
     //    dd($request->all());
-        update::create([
+    $user=User::find($id);
+    $user->update([
+        'name'=>$request->name,
             'email'=>$request->email,
-            'phone'=>$request->phone,
+            'mobile'=>$request->mobile,
+            'password'=>bcrypt($request->password),
         ]);
          return redirect()->back();
     }

@@ -349,29 +349,15 @@ textarea:hover {
     <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="headingThree">
         <div class="card-body">
-            <form action="{{route('user.update.store')}}" method="post" enctype="multipart/form-data">
-              {{-- @method("PUT") --}}
-              @csrf
-              <form>
-                  <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="fname" name="email" placeholder="Enter Your Email">
-                  </div>
-                  <div class="form-group">
-                      <label for="exampleFormControlInput1">Phone </label>
-                      <input type="phone" class="form-control" id="fname" name="phone" placeholder="Enter Your Phone Number">
-                    </div>
 
+            <p>name:{{auth()->User()->name}}</p>
+            <p>name:{{auth()->User()->email}}</p>
+            <p>name:{{auth()->User()->mobile}}</p>
 
-            <div class="text-left">
-                <br>
-              <button class="btn btn-warning solid blank" type="submit">Submit</button>
-            </div>
-          </form>
 
         </div>
         <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="{{route('user.update.store')}}" aria-expanded="false" aria-controls="collapseThree">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="{{route('user.update.store',auth()->User()->id)}}" aria-expanded="false" aria-controls="collapseThree">
             <div class="title btn btn-danger btn-outline btn-lg">Edit Profile</div>
           </a>
         </h4>

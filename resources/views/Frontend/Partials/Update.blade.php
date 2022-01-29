@@ -52,17 +52,29 @@
                          Update
                       </div>
                       <div class="card-body">
-                          <form action="{{route('user.update.store')}}" method="post" enctype="multipart/form-data">
-                            {{-- @method("PUT") --}}
+                          <form action="{{route('user.update.store',auth()->User()->id)}}" method="post" enctype="multipart/form-data">
+                            @method('put')
                             @csrf
                             <form>
                                 <div class="form-group">
+                                    <label for="exampleFormControlInput1">Name</label>
+                                    <input type="text" class="form-control" id="fname" name="name" value="{{auth()->User()->name}}" laceholder="Enter Your Email">
+                                  </div>
+
+
+
+
+                                <div class="form-group">
                                   <label for="exampleFormControlInput1">Email address</label>
-                                  <input type="email" class="form-control" id="fname" name="email" placeholder="Enter Your Email">
+                                  <input type="email" class="form-control" id="fname" name="email" value="{{auth()->User()->email}}" laceholder="Enter Your Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Phone </label>
-                                    <input type="phone" class="form-control" id="fname" name="phone" placeholder="Enter Your Phone Number">
+                                    <input type="phone" class="form-control" id="fname" name="mobile"  value="{{auth()->User()->mobile}}" placeholder="Enter Your Phone Number">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlInput1">password </label>
+                                    <input type="text" class="form-control" id="fname" name="password"  placeholder="Enter Your Phone Number">
                                   </div>
 
 
