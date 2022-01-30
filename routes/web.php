@@ -19,6 +19,7 @@ use App\Http\Controllers\frontend\BookingController;
 use App\Http\Controllers\frontend\InformationController;
 use App\Http\Controllers\frontend\ProfileController;
 use App\Http\Controllers\frontend\UpdateController;
+use App\Http\Controllers\frontend\UserTrackController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -72,11 +73,11 @@ Route::group(['prefix'=>'user-portal'],function(){
 
     Route::get('/Update/{id}',[UpdateController::class,'update'])->name('user.update');
     Route::put('/Update/{id}',[UpdateController::class,'store'])->name('user.update.store');
-    // Route::get('/Update/actual/',[UpdateController::class,'actual_update'])->name('user.update.actual');
-    // Route::get('/Update',[UpdateController::class,'show'])->name('user.update.show');
 
-
-
+    Route::get('/UserTrack',[UserTrackController::class,'tracking'])->name('user.tracking');
+    Route::post('/UserTrack',[UserTrackController::class,'store'])->name('user.tracking.store');
+    Route::get('/UserTrack/Tracking-list',[UserTrackController::class,'list'])->name('user.tracking.list');
+    Route::get('/UserTrack/search',[UserTrackController::class,'show'])->name('user.tracking.show');
 });
 
 
@@ -162,6 +163,7 @@ Route::group(['prefix'=>'admin-portal','middleware'=>['auth','login']],function(
 
      Route::get('/track',[TrackController::class,'create'])->name('track.create');
      Route::post('/track',[TrackController::class,'store'])->name('track.store');
+     Route::get('/UserTrack/search',[UserTrackController::class,'show'])->name('user.tracking.show');
 
     //  Admin
 

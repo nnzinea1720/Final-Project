@@ -53,6 +53,7 @@
         <th scope="col">Phone</th>
         <th scope="col">Weight</th>
         <th scope="col">Type</th>
+        <th scope="col">Tracking Number</th>
         <th scope="col">Image</th>
         <th scope="col">Receiver</th>
         <th scope="col">Receiver Address</th>
@@ -75,6 +76,7 @@
         <td>{{$list->phone}}</td>
         <td>{{$list->weight}}</td>
         <td>{{$list->type}}</td>
+        <td>{{$list->track_number}}</td>
         <td> <img style="border-radius: 4px;" width="100px;" src=" {{url('/uploads/bookings/'.$list->image)}}" alt="image"></td>
         <td>{{$list->receiver}}</td>
         <td>{{$list->rec_address}}</td>

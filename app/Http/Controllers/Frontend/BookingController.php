@@ -65,6 +65,7 @@ class BookingController extends Controller
             'delivery_area'=>$request->delivery_area,
             'total_cost'=>$request->total_cost,
             'date'=>$request->date,
+            'track_number'=>date('Ymdhmis'),
 
         ]);
          return redirect()->back();

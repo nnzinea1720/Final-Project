@@ -2,7 +2,7 @@
 @extends('admin.master')
 @section('content')
 
-<form action="{{route('track.store')}}" method="post" >
+<form action="{{route('user.tracking.show')}}" method="get" >
     @csrf
 
     <div class="form-group">

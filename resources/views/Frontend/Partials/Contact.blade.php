@@ -75,7 +75,7 @@
 
 
                           <div class="text-right"><br>
-                            <button class="btn btn-primary solid blank" type="submit">Send Message</button>
+                            <button class="btn btn-outline-success solid blank" type="submit">Send Message</button>
                           </div>
                         </form>
 

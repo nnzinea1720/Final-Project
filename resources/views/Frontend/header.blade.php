@@ -78,6 +78,8 @@
                                 <li><a href="{{route('user.customer.information')}}"> Customer Information</a></li>
                                 <li><a href="Branch_info.html">Branch Information </a></li>
                               <li><a href="{{route('user.notice.board')}}">Notice </a></li>
+                              <li><a href="{{route('user.tracking')}}">Tracking </a></li>
+                              <li><a href="{{route('user.tracking.list')}}">Tracking Information </a></li>
                             </ul>
                         </li>
 

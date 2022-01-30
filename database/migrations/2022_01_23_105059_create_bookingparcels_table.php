@@ -28,6 +28,7 @@ class CreateBookingparcelsTable extends Migration
             $table->string('delivery_area');
             $table->string('total_cost');
             $table->string('status')->default('pending');
+            $table->string('track_number')->nullable();
             $table->timestamps();
         });
     }

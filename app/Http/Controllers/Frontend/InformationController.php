@@ -9,7 +9,7 @@ class InformationController extends Controller
 {
     public function information()
     {
-        return view('frontend.partials.information');
+        return view ('frontend.partials.information');
     }
     public function store(Request $request)
     {

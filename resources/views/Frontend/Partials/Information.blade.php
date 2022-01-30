@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <h1>
@@ -21,78 +20,78 @@
 <div class="content"> --}}
 
 
- <div class="row">
-    <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="card-title">
-                    <div style="font-weight: bold; padding-top: 10px;" class="title"> Customer Information</div>
-                </div>
-            </div>
-            <div class="panel-body">
-                <form action="{{route('user.customer.store')}}" method="post">
-                 @csrf
-
-                 <div class="row">
-                     <div class="col">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Customer Name</label>
-                            <input type="text" class="form-control" id="fname" name="cust_name" placeholder="Enter your Customer Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Contact</label>
-                            <input type="number" class="form-control" id="fname" name="contact" placeholder="Enter your Contact">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Customer Address</label>
-                            <input type="text" class="form-control" id="fname" name="cust_address" placeholder="Enter your Customer Address">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Branch Name</label>
-                            <input type="text" class="form-control" id="fname" name="branch_name" placeholder="Enter your Branch Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Type</label>
-                            <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Price</label>
-                            <input type="text" class="form-control" id="fname" name="price" placeholder="Enter your Price">
-                        </div>
-
-                     </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Recepient Name</label>
-                                <input type="text" class="form-control" id="fname" name="rec_name" placeholder="Enter your Recepient Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Phone</label>
-                                <input type="number" class="form-control" id="fname" name="phone" placeholder="Enter your Contact">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Recepient Address</label>
-                                <input type="text" class="form-control" id="fname" name="rec_address" placeholder="Enter your Recepient Address">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Pickup Date</label>
-                                <input type="date" class="form-control" id="fname" name="date" placeholder="Enter your Pickup Date">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Time</label>
-                                <input type="time" class="form-control" id="fname" name="time" placeholder="Enter your Time">
-                            </div>
-                        </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="card-title">
+                        <div style="font-weight: bold; padding-top: 10px;" class="title"> Customer Information</div>
                     </div>
-                    <br>
-                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                </div>
+                <div class="panel-body">
+                    <form action="{{route('user.customer.store')}}" method="post">
+                     @csrf
 
-                </form>
+                     <div class="row">
+                         <div class="col">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Customer Name</label>
+                                <input type="text" class="form-control" id="fname" name="cust_name" placeholder="Enter your Customer Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Contact</label>
+                                <input type="number" class="form-control" id="fname" name="contact" placeholder="Enter your Contact">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Customer Address</label>
+                                <input type="text" class="form-control" id="fname" name="cust_address" placeholder="Enter your Customer Address">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Branch Name</label>
+                                <input type="text" class="form-control" id="fname" name="branch_name" placeholder="Enter your Branch Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Type</label>
+                                <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Price</label>
+                                <input type="text" class="form-control" id="fname" name="price" placeholder="Enter your Price">
+                            </div>
+
+                         </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Recepient Name</label>
+                                    <input type="text" class="form-control" id="fname" name="rec_name" placeholder="Enter your Recepient Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Phone</label>
+                                    <input type="number" class="form-control" id="fname" name="phone" placeholder="Enter your Contact">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Recepient Address</label>
+                                    <input type="text" class="form-control" id="fname" name="rec_address" placeholder="Enter your Recepient Address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Pickup Date</label>
+                                    <input type="date" class="form-control" id="fname" name="date" placeholder="Enter your Pickup Date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Time</label>
+                                    <input type="time" class="form-control" id="fname" name="time" placeholder="Enter your Time">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-outline-primary">Submit</button>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
- </div>
-</div>
+
 {{-- @endsection --}}
 
 
