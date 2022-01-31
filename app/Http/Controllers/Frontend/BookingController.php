@@ -77,12 +77,6 @@ class BookingController extends Controller
         return view('admin.layouts.booking-parcel',compact('lists'));
     }
 
-    // public function view($id)
-    // {
-    //     // dd($id);
-    //     $lists=bookingparcel::find($id);
-    //     return view('admin.layouts.view-booking',compact('lists'));
-    // }
     public function edit($id)
     {
         // dd($id);
@@ -102,6 +96,13 @@ class BookingController extends Controller
 
         ]);
           return redirect()->route('booking.parcel.list')->with('success-message', 'Update Created Successfully.');
+    }
+
+     public function viewbooking($id)
+    {
+        // dd($id);
+        $list=bookingparcel::find($id);
+        return view('admin.layouts.view-booking',compact('list'));
     }
 
 

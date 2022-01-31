@@ -16,7 +16,7 @@ class Userlogin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->user()->role=='admin' || auth()->user()->role=='manager'){
+        if(auth()->user()->role=='admin' || auth()->user()->role=='Branch Admin'){
             return $next($request);
         }else
         {

@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\ParcelController;
 use App\Http\Controllers\Backend\TrackController;
 use App\Http\Controllers\Backend\CustomerController;
+use App\Http\Controllers\Backend\PaymentController;
 use App\Http\Controllers\frontend\UserController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ContactController;
@@ -78,6 +79,11 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::post('/UserTrack',[UserTrackController::class,'store'])->name('user.tracking.store');
     Route::get('/UserTrack/Tracking-list',[UserTrackController::class,'list'])->name('user.tracking.list');
     Route::get('/UserTrack/search',[UserTrackController::class,'show'])->name('user.tracking.show');
+
+    Route::get('/User/payment-status',[PaymentController::class,'Payment'])->name('user.payment.status.create');
+    // Route::get('/User/payment-status/payment/{id}',[PaymentController::class,'Payment'])->name('user.payment.status.create');
+    // Route::post('/User/payment-status',[PaymentController::class,'store'])->name('user.payment.status.store');
+
 });
 
 
@@ -158,6 +164,7 @@ Route::group(['prefix'=>'admin-portal','middleware'=>['auth','login']],function(
      Route::get('/booking parcel/approve/{id}',[BookingController::class,'edit'])->name('booking.parcel.approve');
      Route::put('/booking parcel/approve/{id}',[BookingController::class,'update'])->name('booking.parcel.update');
      Route::get('/booking parcel/search',[BookingController::class,'show'])->name('booking.parcel.show');
+     Route::get('/booking parcel/View/{id}',[BookingController::class,'viewbooking'])->name('booking.parcel.view');
 
      //  Track
 
@@ -186,6 +193,8 @@ Route::group(['prefix'=>'admin-portal','middleware'=>['auth','login']],function(
     Route::put('/customer/customer-list/Update/{id}',[CustomerController::class,'update'])->name('customer.update');
     Route::get('/customer/customer-list/View/{id}',[CustomerController::class,'view'])->name('customer.view');
 
-
+   //Payment
+     Route::get('/page/payment-status/add payment/{id}',[PaymentController::class,'edit'])->name('payment.status.create');
+    Route::post('/page/payment-status/add payment',[PaymentController::class,'store'])->name('payment.status.store');
 
 });

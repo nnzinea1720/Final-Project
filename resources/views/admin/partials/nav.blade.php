@@ -285,6 +285,7 @@
                     <li>
                         <a href="{{route('customer.list')}}"> Customer List</a>
                     </li>
+
                     {{-- <li>
                         <a href="#">Second Level Link<span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level">
@@ -304,7 +305,12 @@
                 </ul>
             </li>
             <li>
-                <a href="empty.html"><i class="fa fa-fw fa-file"></i> Empty Page</a>
+                <a href="empty.html"><i class="fa fa-fw fa-file"></i> Page<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href=""> Payment Status</a>
+                    </li>
+                </ul>
             </li>
         </ul>
 

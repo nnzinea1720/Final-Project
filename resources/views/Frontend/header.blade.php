@@ -87,6 +87,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="{{route('user.our.services')}}">Our Services</a></li>
+                              <li><a href="{{route('user.payment.status.create')}}">Payment Status</a></li>
 
                             </ul>
                         </li>

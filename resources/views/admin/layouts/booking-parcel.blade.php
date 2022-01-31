@@ -49,18 +49,18 @@
     <tr>
         <th scope="col">#</th>
         <th scope="col">name</th>
-        <th scope="col">Address</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Weight</th>
+        {{-- <th scope="col">Address</th> --}}
+        {{-- <th scope="col">Phone</th> --}}
+        {{-- <th scope="col">Weight</th> --}}
         <th scope="col">Type</th>
         <th scope="col">Tracking Number</th>
         <th scope="col">Image</th>
         <th scope="col">Receiver</th>
-        <th scope="col">Receiver Address</th>
-         <th scope="col">Contact</th>
+        {{-- <th scope="col">Receiver Address</th> --}}
+         {{-- <th scope="col">Contact</th> --}}
          <th scope="col">Delivery Area</th>
          <th scope="col">Total Cost</th>
-         <th scope="col">Booking Date</th>
+         {{-- <th scope="col">Booking Date</th> --}}
          <th scope="col">Status</th>
         <th scope="col">Action</th>
     </tr>
@@ -72,21 +72,25 @@
     <tr>
         <th scope="row">{{$key+1}}</th>
         <td>{{$list->name}}</td>
-        <td>{{$list->address}}</td>
-        <td>{{$list->phone}}</td>
-        <td>{{$list->weight}}</td>
+        {{-- <td>{{$list->address}}</td> --}}
+        {{-- <td>{{$list->phone}}</td> --}}
+        {{-- <td>{{$list->weight}}</td> --}}
         <td>{{$list->type}}</td>
         <td>{{$list->track_number}}</td>
         <td> <img style="border-radius: 4px;" width="100px;" src=" {{url('/uploads/bookings/'.$list->image)}}" alt="image"></td>
         <td>{{$list->receiver}}</td>
-        <td>{{$list->rec_address}}</td>
-        <td>{{$list->contact}}</td>
+        {{-- <td>{{$list->rec_address}}</td> --}}
+        {{-- <td>{{$list->contact}}</td> --}}
         <td>{{$list->delivery_area}}</td>
         <td>{{$list->total_cost}}</td>
-        <td>{{$list->date}}</td>
+        {{-- <td>{{$list->date}}</td> --}}
         <td>{{$list->status}}</td>
         <td>
-            <a class="btn btn-info" href="{{route('booking.parcel.approve',$list->id)}}">Approve</a>
+            <a class="btn btn-info" href="{{route('payment.status.create',$list->id)}}">Add Payment</a><br>
+            <a class="btn btn-warning" href="{{route('booking.parcel.approve',$list->id)}}">Approve</a><br>
+            <a class="btn btn-primary" href="{{route('booking.parcel.view',$list->id)}}">View</a><br>
+
+
         </td>
 
     </tr>
