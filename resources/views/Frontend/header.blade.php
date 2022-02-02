@@ -20,7 +20,7 @@
                       <div class="info-box">
                         <div class="info-box-content">
                             <p class="info-box-title">Call Us</p>
-                            <p class="info-box-subtitle"><a href="tel:(+9) 847-291-4353">(+9) 847-291-4353</a></p>
+                            <p class="info-box-subtitle"><a href="phone:(+88)01774561211"> (+88)01774561211</a></p>
                         </div>
                       </div>
                     </li>
@@ -78,9 +78,8 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{route('user.customer.information')}}"> Customer Information</a></li>
                                 <li><a href="Branch_info.html">Branch Information </a></li>
-                              <li><a href="{{route('user.notice.board')}}">Notice </a></li>
                               <li><a href="{{route('user.tracking')}}">Tracking </a></li>
-                              <li><a href="{{route('user.tracking.information')}}">Tracking Information </a></li>
+                              <li><a href="{{route('user.tracking.information')}}">Payment Status </a></li>
                             </ul>
                         </li>
 
@@ -88,8 +87,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="{{route('user.our.services')}}">Our Services</a></li>
-
-                              <li><a href="">Payment Status</a></li>
+                              <li><a href="{{route('user.services.notice.list')}}">Notice </a></li>
 
                             </ul>
                         </li>

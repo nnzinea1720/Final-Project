@@ -21,7 +21,7 @@
 
 <h1></h1>
 <br>
-<a href="{{route('contact.create')}}" class="btn btn-success">Create new branch list</a>
+<a href="#" class="btn btn-success">Contact Details</a>
 
 <!-- <------Search----->
 {{-- <form  action="{{route('branch.show')}}">
@@ -42,27 +42,24 @@
     <thead>
     <tr>
         <th scope="col">#</th>
-        <th scope="col">division</th>
-        <th scope="col">district</th>
-        <th scope="col">office</th>
-        <th scope="col">address</th>
-        <th scope="col">contact</th>
-        <th scope="col">type</th>
-        <th scope="col">Action</th>
-
+        <th scope="col">name</th>
+        <th scope="col">email</th>
+        <th scope="col">phone</th>
+        <th scope="col">message</th>
 
     </tr>
     </thead>
     <tbody>
-        @foreach ($branchs as $key=>$branch)
+        @foreach ($lists as $key=>$list)
             <tr>
                 <th>{{$key}}</th>
-                <td>{{$branch->division}}</td>
-                <td>{{$branch->district}}</td>
-                <td>{{$branch->office}}</td>
-                <td>{{$branch->address}}</td>
-                <td>{{$branch->contact}}</td>
-                <td>{{$branch->type}}</td>
+                <td>{{$list->name}}</td>
+                <td>{{$list->email}}</td>
+                <td>{{$list->phone}}</td>
+                <td>{{$list->message}}</td>
+                <td>
+                    <a class="btn btn-danger" href="{{route('contact.delete',$list->id)}}"> Delete</a>
+                </td>
 
             </tr>
         @endforeach

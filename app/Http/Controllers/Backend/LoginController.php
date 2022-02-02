@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Backend;
 use App\Models\User;
 use App\Models\Parcel;
+use App\Models\Branch;
 use App\Http\Controllers\Controller;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -40,7 +42,9 @@ class LoginController extends Controller
     public function dashboard()
     {
         $parcels=Parcel::count();
-        return view('admin.layouts.home',compact('parcels'));
+        $branchs=Branch::count();
+        $customers=Customer::count();
+        return view('admin.layouts.home',compact('parcels','branchs','customers'));
     }
 
 

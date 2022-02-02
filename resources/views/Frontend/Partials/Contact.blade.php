@@ -52,7 +52,7 @@
                           Contact
                       </div>
                       <div class="card-body">
-                          <form action="" method="post" enctype="multipart/form-data">
+                          <form action="{{route('contact.create.store')}}" method="post">
                             @csrf
                             <form>
                                 <div class="form-group">

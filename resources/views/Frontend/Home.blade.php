@@ -37,8 +37,8 @@
           <div class="container h-100">
             <div class="row align-items-center h-100">
                 <div class="col-md-12 text-center">
-                  <h2 class="slide-title" data-animation-in="slideInLeft">17 Years of excellence in</h2>
-                  <h3 class="slide-sub-title" data-animation-in="slideInRight">Courier service</h3>
+                  <h2 class="slide-title" style="color:black" data-animation-in="slideInLeft"> Years of excellence in</h2>
+                  <h3 class="slide-sub-title" style="color:black" data-animation-in="slideInRight">Courier service</h3>
                   <p data-animation-in="slideInLeft" data-duration-in="1.2">
                       <a href="{{route('user.our.services')}}" class="slider btn btn-primary">Our Services</a>
                       <a href="{{route('user.contact')}}" class="slider btn btn-primary border">Contact Now</a>
@@ -56,11 +56,11 @@
           <div class="row align-items-center h-100">
               <div class="col-md-12">
                 <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
-                <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
-                <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is Simple</h3>
-                <p data-animation-in="slideInRight">
+                <h3 class="slide-title" style="color:black" data-animation-in="fadeIn">When Service Matters</h3>
+                <h3 class="slide-sub-title" style="color:black" data-animation-in="slideInLeft">Your Choice is Simple</h3>
+                {{-- <p data-animation-in="slideInRight">
                     <a href="services.html" class="slider btn btn-primary border">Our Services</a>
-                </p>
+                </p> --}}
               </div>
           </div>
         </div>
@@ -72,13 +72,13 @@
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12">
-                <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Staffs</h2>
-                <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
-                <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that determines how you achieve success.</p>
+                <h2 class="slide-title" style="color:black" data-animation-in="slideInDown">Meet Our Staffs</h2>
+                <h3 class="slide-sub-title" style="color:black" data-animation-in="fadeIn">We believe sustainability</h3>
+                {{-- <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that determines how you achieve success.</p>
                 <div data-animation-in="slideInLeft">
                     <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Get Free Quote</a>
                     <a href="about.html" class="slider btn btn-primary border" aria-label="learn-more-about-us">Learn more</a>
-                </div>
+                </div> --}}
               </div>
           </div>
         </div>

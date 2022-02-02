@@ -13,6 +13,13 @@ class ContactController extends Controller
         return view ('frontend.partials.contact');
     }
 
+    public function list()
+    {
+       $lists= Contact::all();
+        return view('admin.layouts.contact',compact('lists'));
+    }
+
+
     public function contact(Request $request)
     {
 
@@ -26,4 +33,12 @@ class ContactController extends Controller
         ]);
          return redirect()->back();
     }
+
+    public function delete($id)
+    {
+       $lists=Contact::find($id);
+      $lists->delete();
+     return redirect()->back()->with('message','Branch Created Successfully.');
+    }
+
 }

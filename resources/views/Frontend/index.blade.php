@@ -85,11 +85,11 @@
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12 text-center">
-                <h2 class="slide-title" data-animation-in="slideInLeft">17 Years of excellence in</h2>
-                <h3 class="slide-sub-title" data-animation-in="slideInRight">Courier Service</h3>
+                <h2 class="slide-title" style="color:black" data-animation-in="slideInLeft"> Years of excellence in</h2>
+                <h3 class="slide-sub-title" style="color:black" data-animation-in="slideInRight">Courier Service</h3>
                 <p data-animation-in="slideInLeft" data-duration-in="1.2">
-                    <a href="services.html" class="slider btn btn-primary">Our Services</a>
-                    <a href="contact.html" class="slider btn btn-primary border">Contact Now</a>
+                    <a href="{{route('user.tracking.information')}}" class="slider btn btn-primary">Payment Status</a>
+                    <a href="{{route('user.contact')}}" class="slider btn btn-primary border" style="color:brown">Contact Now</a>
                 </p>
               </div>
           </div>
@@ -103,11 +103,11 @@
           <div class="row align-items-center h-100">
               <div class="col-md-12">
                 <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
-                <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
-                <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is Simple</h3>
-                <p data-animation-in="slideInRight">
+                <h3 class="slide-title" style="color:black" data-animation-in="fadeIn">When Service Matters</h3>
+                <h3 class="slide-sub-title" style="color:black" data-animation-in="slideInLeft">Your Choice is Simple</h3>
+                {{-- <p data-animation-in="slideInRight">
                     <a href="services.html" class="slider btn btn-primary border">Our Services</a>
-                </p>
+                </p> --}}
               </div>
           </div>
         </div>
@@ -119,13 +119,13 @@
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12">
-                <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Staffs</h2>
-                <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
-                <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that determines how you achieve success.</p>
-                <div data-animation-in="slideInLeft">
+                <h2 class="slide-title" style="color:black" data-animation-in="slideInDown">Meet Our Staffs</h2>
+                <h3 class="slide-sub-title" style="color:black" data-animation-in="fadeIn">We believe sustainability</h3>
+                {{-- <p class="slider-description lead" style="color:black" data-animation-in="slideInRight">We will deal with your failure that determines how you achieve success.</p> --}}
+                {{-- <div data-animation-in="slideInLeft">
                     <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Get Free Quote</a>
                     <a href="about.html" class="slider btn btn-primary border" aria-label="learn-more-about-us">Learn more</a>
-                </div>
+                </div> --}}
               </div>
           </div>
         </div>
@@ -276,8 +276,8 @@
                 <img loading="lazy" src="{{url('/frontend/images/icon-image/fact1.png')}}" alt="facts-img">
               </div>
               <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="1789">0</span></h2>
-                <h3 class="ts-facts-title">Total Projects</h3>
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="100">0</span></h2>
+                <h3 class="ts-facts-title">Total Branches</h3>
               </div>
           </div><!-- Col end -->
 
@@ -306,7 +306,7 @@
                 <img loading="lazy" src="{{url('/frontend/images/icon-image/fact4.png')}}" alt="facts-img">
               </div>
               <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="44">0</span></h2>
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="20">0</span></h2>
                 <h3 class="ts-facts-title">Countries Experience</h3>
               </div>
           </div><!-- Col end -->
@@ -350,7 +350,7 @@
               </div>
           </div><!-- Service 2 end -->
 
-          <div class="ts-service-box d-flex">
+          {{-- <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
                 <img loading="lazy" src="{{url('/frontend/images/icon-image/service-icon3.png')}}"  alt="service-icon">
               </div>
@@ -358,7 +358,7 @@
                 <h3 class="service-box-title"><a href="#">Interior Design</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
               </div>
-          </div><!-- Service 3 end -->
+          </div><!-- Service 3 end --> --}}
 
         </div><!-- Col end -->
 
@@ -377,7 +377,7 @@
               </div>
           </div><!-- Service 4 end -->
 
-          <div class="ts-service-box d-flex">
+          {{-- <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
                 <img loading="lazy" src="{{url('/frontend/images/icon-image/service-icon5.png')}}" alt="service-icon">
               </div>
@@ -385,7 +385,7 @@
                 <h3 class="service-box-title"><a href="#">Renovation</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
               </div>
-          </div><!-- Service 5 end -->
+          </div><!-- Service 5 end --> --}}
 
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
@@ -558,7 +558,7 @@
   <!--/ Container end -->
 </section><!-- Project area end -->
 
-<section class="content">
+{{-- <section class="content">
   <div class="container">
     <div class="row">
         <div class="col-lg-6">
@@ -685,9 +685,9 @@
               <h3>Can We Help?</h3>
               <h4>(+9) 847-291-4353</h4>
           </div>
-        </div><!-- Col end -->
+        </div><!-- Col end --> --}}
 
-        <div class="col-md-8">
+        {{-- <div class="col-md-8">
           <div class="ts-newsletter row align-items-center">
               <div class="col-md-5 newsletter-introtext">
                 <h4 class="text-white mb-0">Newsletter Sign-up</h4>
@@ -718,10 +718,10 @@
           <h2 class="section-title">Work of Excellence</h2>
           <h3 class="section-sub-title">Recent Projects</h3>
         </div>
-    </div>
+    </div> --}}
     <!--/ Title row end -->
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="latest-post">
               <div class="latest-post-media">
@@ -779,13 +779,13 @@
                     </span>
                 </div>
               </div>
-          </div><!-- Latest post end -->
-        </div><!-- 3rd post col end -->
-    </div>
+          </div><!-- Latest post end --> --}}
+        {{-- </div><!-- 3rd post col end -->
+    </div> --}}
     <!--/ Content row end -->
 
     <div class="general-btn text-center mt-4">
-        <a class="btn btn-primary" href="news-left-sidebar.html">See All Posts</a>
+        <a class="btn btn-primary" Style="color:rgb(111, 0, 255)" href="{{route('user.tracking')}}">Tracking</a>
     </div>
 
   </div>

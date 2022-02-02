@@ -17,7 +17,7 @@
     </div>
 
     <ul class="nav navbar-top-links navbar-right">
-        <li class="dropdown">
+        {{-- <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                 <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
             </a>
@@ -66,7 +66,7 @@
                 </li>
             </ul>
             <!-- /.dropdown-messages -->
-        </li>
+        </li> --}}
         <!-- /.dropdown -->
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
@@ -212,10 +212,10 @@
                 <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                <li><a href="{{route('admin.form')}}"><i class="fa fa-user fa-fw"></i> Admin Profile</a>
                 </li>
-                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                </li>
+                {{-- <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                </li> --}}
                 <li class="divider"></li>
                 <li><a href="{{route('admin.logout')}}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>
@@ -405,7 +405,10 @@
                 <a href="empty.html"><i class="fa fa-fw fa-file"></i> Page<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href=""> Contact</a>
+                        <a href="{{route('contact.create.store')}}"> Contact</a>
+                    </li>
+                    <li>
+                        <a href="{{route('notice.create')}}"> Notice</a>
                     </li>
                 </ul>
             </li>

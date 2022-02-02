@@ -11,11 +11,11 @@ use App\Http\Controllers\Backend\ParcelController;
 use App\Http\Controllers\Backend\TrackController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\PaymentController;
+use App\Http\Controllers\Backend\NoticeController;
 use App\Http\Controllers\frontend\UserController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\frontend\ServiceController;
-use App\Http\Controllers\frontend\NoticeController;
 use App\Http\Controllers\frontend\BookingController;
 use App\Http\Controllers\frontend\InformationController;
 use App\Http\Controllers\frontend\ProfileController;
@@ -60,7 +60,9 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::get('/Contact',[ContactController::class,'create'])->name('user.contact');
     Route::post('/Contact',[ContactController::class,'contact'])->name('user.contact');
 
-    Route::get('/Notice board',[NoticeController::class,'notice'])->name('user.notice.board');
+    // Route::get('services/Notice',[NoticeController::class,'notice'])->name('user.services.notice');
+    Route::get('services/Notice',[NoticeController::class,'list'])->name('user.services.notice.list');
+    // Route::post('services/Notice',[NoticeController::class,'store'])->name('user.services.notice.store');
 
     Route::get('/Our Services',[ServiceController::class,'service'])->name('user.our.services');
 
@@ -198,7 +200,13 @@ Route::group(['prefix'=>'admin-portal','middleware'=>['auth','login']],function(
     Route::post('/page/payment-status/add payment/{id}',[PaymentController::class,'store'])->name('payment.status.store');
 
     //Contact
-    Route::get('page/Contact',[ContactController::class,'create'])->name('contact.create');
-    Route::get('page/Contact',[ContactController::class,'store'])->name('contact.create.store');
-    Route::post('page/Contact',[ContactController::class,'list'])->name('contact.list');
+    Route::post('page/Contact',[ContactController::class,'contact'])->name('contact.create.store');
+    Route::get('page/Contact',[ContactController::class,'list'])->name('contact.list');
+
+    Route::get('/page/contact/Delete/{id}',[ContactController::class,'delete'])->name('contact.delete');
+
+    //Notice
+    Route::get('page/Notice',[NoticeController::class,'create'])->name('notice.create');
+    Route::post('page/Notice',[NoticeController::class,'store'])->name('notice.store');
+
 });

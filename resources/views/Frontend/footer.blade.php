@@ -27,20 +27,20 @@
             <div class="working-hours">
               We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
               Hotline and Contact form.
-              <br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
-              <br> Saturday: <span class="text-right">12:00 - 15:00</span>
-              <br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
+              <br><br> Monday - Friday: <span class="text-right">10:00 AM - 08:00 PM</span>
+              <br> Saturday: <span class="text-right">10:00 AM - 05:00 PM</span>
+              <br> Sunday and holidays: <span class="text-right">10:00 AM - 08:30 PM</span>
             </div>
           </div><!-- Col end -->
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
             <h3 class="widget-title">Services</h3>
             <ul class="list-arrow">
-              <li><a href="service-single.html">Pre-Construction</a></li>
-              <li><a href="service-single.html">General Contracting</a></li>
-              <li><a href="service-single.html">Construction Management</a></li>
-              <li><a href="service-single.html">Design and Build</a></li>
-              <li><a href="service-single.html">Self-Perform Construction</a></li>
+              <li><a href="#">Courier Service</a></li>
+              <li><a href="#">Parcel Service</a></li>
+              <li><a href="#">Transportation Service</a></li>
+              <li><a href="#">Delivery</a></li>
+              {{-- <li><a href="service-single.html">Self-Perform Construction</a></li> --}}
             </ul>
           </div><!-- Col end -->
         </div><!-- Row end -->
