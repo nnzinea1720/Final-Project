@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-use App\Models\Customer;
+use App\Models\Information;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -15,36 +15,32 @@ class CustomerController extends Controller
 
     public function list()
     {
-       $customers= Customer::all();
+       $customers=Information::all();
         return view('admin.layouts.customer-list',compact('customers'));
     }
 
 
     public function store(Request $request)
     {
-        Customer::create([
+        Information::create([
 
                 'cust_name'=>$request->cust_name,
-                'cust_contact'=>$request->cust_contact,
+                'contact'=>$request->contact,
+                'email'=>$request->email,
                 'cust_address'=>$request->cust_address,
-                'rec_name'=>$request->rec_name,
-                'rec_phone'=>$request->rec_phone,
-                'rec_address'=>$request->rec_address,
                 'branch_name'=>$request->branch_name,
-                'type'=>$request->type,
-                'price'=>$request->price,
-                'date'=>$request->date,
-                'time'=>$request->time,
+                'division'=>$request->division,
+
 
 
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Data entry successfully.');
     }
 
 
     public function delete($id)
         {
-           $customers=Customer::find($id);
+           $customers=Information::find($id);
           $customers->delete();
          return redirect()->back()->with('success-message','Customer Created Successfully.');
         }
@@ -52,7 +48,7 @@ class CustomerController extends Controller
         public function edit($id)
         {
             // dd($id);
-           $customers=Customer::find($id);
+           $customers=Information::find($id);
         //    dd($branchs);
         //   $branchs->edit();
         //  return redirect()->back()->with('success-message','Customer Created Successfully.');
@@ -63,29 +59,25 @@ class CustomerController extends Controller
         {
             // dd($request->all());
             // dd($id);
-          $customers=Customer::find($id);
+          $customers=Information::find($id);
          $customers->update([
             'cust_name'=>$request->cust_name,
-                'cust_contact'=>$request->cust_contact,
+                'contact'=>$request->contact,
+                'email'=>$request->email,
                 'cust_address'=>$request->cust_address,
-                'rec_name'=>$request->rec_name,
-                'rec_phone'=>$request->rec_phone,
-                'rec_address'=>$request->rec_address,
                 'branch_name'=>$request->branch_name,
-                'type'=>$request->type,
-                'price'=>$request->price,
-                'date'=>$request->date,
-                'time'=>$request->time,
+                'division'=>$request->division,
+
 
 
         ]);
-             return redirect()->back()->with('success-message', 'Update Created Successfully.');
+             return redirect()->back()->with('success', 'Update Created Successfully.');
     }
 
     public function view($id)
         {
             // dd($id);
-            $customers=Customer::find($id);
+            $customers=Information::find($id);
             return view('admin.layouts.view-customer',compact('customers'));
         }
 

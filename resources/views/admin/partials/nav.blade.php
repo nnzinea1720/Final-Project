@@ -233,10 +233,11 @@
             <li>
                 <a class="active-menu" href="{{route('admin')}}"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
+            @if(auth()->user()->role=='admin')
             <li>
                 <a href="{{route('admin.form')}}"><i class="fa fa-desktop"></i> Admin</a>
             </li>
-
+     @elseif(auth()->user()->role=='Branch Admin')
              <li>
                 <a href="#"><i class="fa fa-sitemap"></i> Branch<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
@@ -304,14 +305,111 @@
                     </li> --}}
                 </ul>
             </li>
+            @endif
+
+
+
+
+
+
+
+
+            @if(auth()->user()->role=='admin')
+
+
+            <li>
+                <a href="#"><i class="fa fa-sitemap"></i> Branch<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+
+                    <li>
+                        <a href="{{route('branch.create')}}"> Add Branch</a>
+                    </li>
+                    <li>
+                        <a href="{{route('branch.list')}}"> Branch list</a>
+                    </li>
+                    <li>
+                        <a href="{{route('staff.create')}}"> Add Staff</a>
+                    </li>
+                    <li>
+                        <a href="{{route('staff.list')}}"> Staff list</a>
+                    </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sitemap"></i> Parcel<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+
+                          <li>
+                             <a href="{{route('parcel.create')}}"><i class="fa fa-qrcode"></i> Parcel</a>
+                         </li>
+
+                          <li>
+                             <a href="{{route('parcel.details')}}"><i class="fa fa-table"></i> Parcel Details</a>
+                         </li>
+                         <li>
+                            <a href="{{route('booking.parcel.list')}}"><i class="fa fa-table"></i> Booking Parcel</a>
+                        </li>
+                    </ul>
+                </li>
+            <li>
+                <a href="{{route('track.create')}}"><i class="fa fa-edit"></i> Tracking </a>
+            </li>
+
+
+            <li>
+                <a href="customer.html"><i class="fa fa-sitemap"></i> Customer<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{route('customer.create')}}"> Customer Information</a>
+                    </li>
+                    <li>
+                        <a href="{{route('customer.list')}}"> Customer List</a>
+                    </li>
+
+                    {{-- <li>
+                        <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">Third Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Third Level Link</a>
+                            </li>
+
+                        </ul>
+
+                    </li> --}}
+                </ul>
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <li>
                 <a href="empty.html"><i class="fa fa-fw fa-file"></i> Page<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href=""> Payment Status</a>
+                        <a href=""> Contact</a>
                     </li>
                 </ul>
             </li>
+            @endif
         </ul>
 
     </div>

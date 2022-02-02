@@ -42,16 +42,11 @@
     <tr>
         <th scope="col">#</th>
         <th scope="col">cust_name</th>
-        {{-- <th scope="col">cust_contact</th> --}}
+        <th scope="col">cust_contact</th>
+        <th scope="col">email</th>
         <th scope="col">cust_address</th>
-        <th scope="col">rec_name</th>
-        {{-- <th scope="col">rec_phone</th> --}}
-        <th scope="col">rec_address</th>
-        {{-- <th scope="col">branch_name</th> --}}
-        <th scope="col">type</th>
-        <th scope="col">price</th>
-        {{-- <th scope="col">date</th>
-        <th scope="col">time</th> --}}
+        <th scope="col">branch_name</th>
+        <th scope="col">division</th>
         <th scope="col">Action</th>
 
 
@@ -60,18 +55,13 @@
     <tbody>
         @foreach ($customers as $key=>$customer)
             <tr>
-                <th>{{$key}}</th>
+                <th>{{$key+1}}</th>
                 <td>{{$customer->cust_name}}</td>
-                {{-- <td>{{$customer->cust_contact}}</td> --}}
+                <td>{{$customer->contact}}</td>
+                <td>{{$customer->email}}</td>
                 <td>{{$customer->cust_address}}</td>
-                <td>{{$customer->rec_name}}</td>
-                {{-- <td>{{$customer->rec_phone}}</td> --}}
-                <td>{{$customer->rec_address}}</td>
-                {{-- <td>{{$customer->branch_name}}</td> --}}
-                <td>{{$customer->type}}</td>
-                <td>{{$customer->price}}</td>
-                {{-- <td>{{$customer->date}}</td> --}}
-                {{-- <td>{{$customer->time}}</td> --}}
+                <td>{{$customer->branch_name}}</td>
+                <td>{{$customer->division}}</td>
                 <td>
                     <a class="btn btn-danger" href="{{route('customer.delete',$customer->id)}}"> Delete</a>
                     <a class="btn btn-info" href="{{route('customer.edit',$customer->id)}}"> Edit</a>

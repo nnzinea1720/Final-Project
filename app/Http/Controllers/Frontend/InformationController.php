@@ -20,15 +20,11 @@ class InformationController extends Controller
 
             'cust_name'=>$request->cust_name,
             'contact'=>$request->contact,
+            'email'=>$request->email,
             'cust_address'=>$request->cust_address,
             'branch_name'=>$request->branch_name,
-            'type'=>$request->type,
-            'price'=>$request->price,
-            'rec_name'=>$request->rec_name,
-            'phone'=>$request->phone,
-            'rec_address'=>$request->rec_address,
-            'date'=>$request->date,
-            'time'=>$request->time,
+            'division'=>$request->division,
+
 
         ]);
         return redirect()->back();

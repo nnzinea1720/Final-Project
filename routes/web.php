@@ -79,11 +79,11 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::post('/UserTrack',[UserTrackController::class,'store'])->name('user.tracking.store');
     Route::get('/UserTrack/Tracking-list',[UserTrackController::class,'list'])->name('user.tracking.list');
     Route::get('/UserTrack/search',[UserTrackController::class,'show'])->name('user.tracking.show');
-
-    Route::get('/User/payment-status',[PaymentController::class,'Payment'])->name('user.payment.status.create');
+    Route::get('/information/tracking information',[UserTrackController::class,'info'])->name('user.tracking.information');
+    // Route::get('/service/payment-status/{id}',[UserTrackController::class,'history'])->name('user.tracking.history');
     // Route::get('/User/payment-status/payment/{id}',[PaymentController::class,'Payment'])->name('user.payment.status.create');
     // Route::post('/User/payment-status',[PaymentController::class,'store'])->name('user.payment.status.store');
-
+      Route::get('/information/tracking information/view/{id}',[UserTrackController::class,'history'])->name('user.tracking.history');
 });
 
 
@@ -195,6 +195,10 @@ Route::group(['prefix'=>'admin-portal','middleware'=>['auth','login']],function(
 
    //Payment
      Route::get('/page/payment-status/add payment/{id}',[PaymentController::class,'edit'])->name('payment.status.create');
-    Route::post('/page/payment-status/add payment',[PaymentController::class,'store'])->name('payment.status.store');
+    Route::post('/page/payment-status/add payment/{id}',[PaymentController::class,'store'])->name('payment.status.store');
 
+    //Contact
+    Route::get('page/Contact',[ContactController::class,'create'])->name('contact.create');
+    Route::get('page/Contact',[ContactController::class,'store'])->name('contact.create.store');
+    Route::post('page/Contact',[ContactController::class,'list'])->name('contact.list');
 });

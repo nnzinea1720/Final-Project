@@ -3,7 +3,16 @@
 @extends('admin.master')
 @section('content')
 
-
+@if(session()->has('success'))
+    <p class="alert alert-success">
+        {{session()->get('success')}}
+    </p>
+@endif
+@if(session()->has('error'))
+    <p class="alert alert-danger">
+        {{session()->get('error')}}
+    </p>
+@endif
 
 
 <div class="row">
@@ -23,44 +32,25 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1"> Customer Contact:</label>
-                            <input type="number" class="form-control" id="fname" name="cust_contact" placeholder="Enter your Customer Contact">
+                            <input type="number" class="form-control" id="fname" name="contact" placeholder="Enter your Customer Contact">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1"> Email:</label>
+                            <input type="email" class="form-control" id="fname" name="email" placeholder="Enter your Email">
                           </div>
                           <div class="form-group">
                             <label for="exampleInputEmail1"> Customer Address:</label>
-                            <input type="text" class="form-control" id="fname" name="cust_address" placeholder="Enter your Customer Address">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1"> Receipient Name:</label>
-                            <input type="text" class="form-control" id="fname" name="rec_name" placeholder="Enter your Recepient Name">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1"> Recepient Phone:</label>
-                            <input type="number" class="form-control" id="fname" name="rec_phone" placeholder="Enter your Recepient Phone">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1"> Recepient Address:</label>
-                            <input type="text" class="form-control" id="fname" name="rec_address" placeholder="Enter your Recepient Address">
+                            <input type="text" class="form-control" id="fname" name="cust_address" placeholder="Enter your Email">
                           </div>
                           <div class="form-group">
                             <label for="exampleInputEmail1"> Branch Name:</label>
                             <input type="text" class="form-control" id="fname" name="branch_name" placeholder="Enter your Branch Name">
                           </div>
                           <div class="form-group">
-                            <label for="exampleInputEmail1"> Type:</label>
-                            <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your type">
+                            <label for="exampleInputEmail1"> Division:</label>
+                            <input type="text" class="form-control" id="fname" name="division" placeholder="Enter your division">
                           </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1"> Price:</label>
-                            <input type="price" class="form-control" id="fname" name="price" placeholder="Enter your price">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1"> Pickup Date:</label>
-                            <input type="date" class="form-control" id="fname" name="date" placeholder="Enter your date">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1"> Pickup Time:</label>
-                            <input type="time" class="form-control" id="fname" name="time" placeholder="Enter your time">
-                          </div>
+
 
                         <button type="submit" class="btn btn-primary">Submit</button>
 

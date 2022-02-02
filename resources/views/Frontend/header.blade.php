@@ -60,6 +60,7 @@
                         <li class="nav-item dropdown active">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
+
                               <li class="active"><a href="{{route('user.home.one')}}">Home one</a></li>
                             </ul>
                         </li>
@@ -79,7 +80,7 @@
                                 <li><a href="Branch_info.html">Branch Information </a></li>
                               <li><a href="{{route('user.notice.board')}}">Notice </a></li>
                               <li><a href="{{route('user.tracking')}}">Tracking </a></li>
-                              <li><a href="{{route('user.tracking.list')}}">Tracking Information </a></li>
+                              <li><a href="{{route('user.tracking.information')}}">Tracking Information </a></li>
                             </ul>
                         </li>
 
@@ -87,7 +88,8 @@
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
                               <li><a href="{{route('user.our.services')}}">Our Services</a></li>
-                              <li><a href="{{route('user.payment.status.create')}}">Payment Status</a></li>
+
+                              <li><a href="">Payment Status</a></li>
 
                             </ul>
                         </li>
@@ -102,9 +104,9 @@
                         <li class="nav-item"><a class="nav-link" href="about us.html"> About Us</a></li>
 
                     </ul>
+                    @if(auth()->user())
 
 
-                        @if(auth()->user())
                         <li class="nav-item"><a class="nav-link" href="{{route('user.logout')}}">logout</a></li>
 
                          @else

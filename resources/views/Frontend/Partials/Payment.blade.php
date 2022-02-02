@@ -24,42 +24,12 @@
 </h1>
 <body>
 
-    <section style="padding-top:60px;">
-        <div class="container">
-            <div class="row">
-              <div class="col-md-6 offset-md-3">
-                  <div class="card">
-                      <div class="card-header">
-                        Payment
-                      </div>
-                      <div class="card-body">
-                        <form action="" method="post" >
-                            @csrf
-
-                            <div class="form-group">
-                              <br><label for="exampleInputPassword1">Enter Payment</label><br>
-                              <input type="number" class="form-control" id="fname" name="no"placeholder="Enter Tracking Payment ">
-                            </div>
-                             <br>
-                            <button type="Paid" class="btn btn-outline-primary">Paid </button>
-                            <button type="submit" class="btn btn-outline-danger">Cancel </button>
-                          </form>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-<br> <br>
-
 {{-- <h1 style="text-align:center;">{{auth()->User()->name}}</h1> --}}
 
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">#</th>
+
                 <th scope="col">Payment Amount</th>
                 <th scope="col">Payment Method</th>
                 <th scope="col">Transaction ID</th>
@@ -70,16 +40,13 @@
             </tr>
             </thead>
             <tbody>
-                @foreach ($list as $key=>$branch)
                     <tr>
-                        <th>{{$key+1}}</th>
-                        <td>{{$branch->payment_amount}}</td>
-                        <td>{{$branch->method}}</td>
-                        <td>{{$branch->transaction}}</td>
-                        <td>{{$branch->status}}</td>
-                        @foreach ($lists as $key=>$list)
-                         <td>{{$list->name}}</td>
-                         @endforeach
+
+                        <td>{{$paymentHistory->payment_amount}}</td>
+                        <td>{{$paymentHistory->method}}</td>
+                        <td>{{$paymentHistory->transaction}}</td>
+                        <td>{{$paymentHistory->status}}</td>
+
                         <td>
                             {{-- <a class="btn btn-primary" href="{{route('backend.category.views',$category->id)}}">View</a> --}}
                             {{-- <a class="btn btn-primary" href="{{route('branch.update',$branch->id)}}">Update</a> --}}
@@ -87,7 +54,6 @@
 
                         </td>
                     </tr>
-                @endforeach
 
             </tbody>
         </table>

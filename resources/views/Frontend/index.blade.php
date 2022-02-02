@@ -403,7 +403,7 @@
   <!--/ Container end -->
 </section><!-- Service end -->
 
-<section id="project-area" class="project-area solid-bg">
+{{-- <section id="project-area" class="project-area solid-bg">
   <div class="container">
     <div class="row text-center">
       <div class="col-lg-12">
@@ -545,7 +545,7 @@
             </div>
           </div><!-- shuffle item 6 end -->
         </div><!-- shuffle end -->
-      </div>
+      </div> --}}
 
       <div class="col-12">
         <div class="general-btn text-center">

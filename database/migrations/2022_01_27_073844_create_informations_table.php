@@ -17,15 +17,10 @@ class CreateInformationsTable extends Migration
             $table->id();
             $table->string('cust_name');
             $table->string('contact');
+            $table->string('email');
             $table->string('cust_address');
             $table->string('branch_name');
-            $table->string('type');
-            $table->string('price');
-            $table->string('rec_name');
-            $table->string('phone');
-            $table->string('rec_address');
-            $table->string('date');
-            $table->string('time');
+            $table->string('division');
             $table->timestamps();
         });
     }

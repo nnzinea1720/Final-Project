@@ -1,9 +1,8 @@
 @extends('admin.master')
 @section('content')
 
-<form action="{{route('payment.status.store')}}" method="post" >
+<form action="{{route('payment.status.store',$bookingparcel->id)}}" method="post" >
     @csrf
-
     <div class="form-group">
       <br><label for="exampleInputPassword1"> Payment Amount</label><br>
       <input type="number" class="form-control" id="fname" name="payment_amount" placeholder="Enter Tracking Payment ">

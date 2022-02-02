@@ -15,23 +15,28 @@ class PaymentController extends Controller
 
     public function payment()
     {
-        $lists=Bookingparcel::all();
-        $list=Payment::all();
-        return view('frontend.partials.Payment',compact('lists','list'));
+
+        $list=Payment::with('booking')->get();
+        return view('frontend.partials.Payment',compact('list'));
     }
 
-    public function edit()
+    public function edit($id)
     {
         // dd($id);
+        $bookingparcel = Bookingparcel::find($id);
+        if ($bookingparcel) {
+        return view('admin.layouts.Payment',compact('bookingparcel'));
 
-        return view('admin.layouts.Payment');
+        }
+
     }
 
 
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
+        // dd($id);
         Payment::create([
-
+            'bookingsparcel_id'=>$id,
                 'payment_amount'=>$request->payment_amount,
                 'method'=>$request->method,
                 'transaction'=>$request->transaction,
@@ -39,7 +44,7 @@ class PaymentController extends Controller
 
 
         ]);
-        // return redirect()->back();
+        return redirect()->back();
     }
 
 
@@ -59,6 +64,13 @@ class PaymentController extends Controller
     //     ]);
     //     //   return redirect()->route('booking.parcel.list')->with('success-message', 'Update Created Successfully.');
     // }
-
+    public function show(Request $request)
+    {
+        $key= request()->no;
+       //  dd($key);
+        $lists=Bookingparcel::where('track_number','LIKE',"%{$key}%")->get();
+       //  dd($trackings);
+        return view('admin.layouts.tracking-list',compact('lists'));
+    }
 
 }

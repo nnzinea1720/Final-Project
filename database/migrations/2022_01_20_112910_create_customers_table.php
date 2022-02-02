@@ -17,15 +17,10 @@ class CreateCustomersTable extends Migration
             $table->id();
             $table->string('cust_name');
             $table->string('cust_contact');
+            $table->string('email');
             $table->string('cust_address');
-            $table->string('rec_name');
-            $table->string('rec_phone');
-            $table->string('rec_address');
             $table->string('branch_name');
-            $table->string('type');
-            $table->string('price');
-            $table->string('date');
-            $table->string('time');
+            $table->string('division');
             $table->timestamps();
         });
     }

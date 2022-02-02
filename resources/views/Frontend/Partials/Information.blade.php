@@ -43,44 +43,26 @@
                                 <input type="number" class="form-control" id="fname" name="contact" placeholder="Enter your Contact">
                             </div>
                             <div class="form-group">
+                                <label for="exampleInputPassword1">Email</label>
+                                <input type="email" class="form-control" id="fname" name="email" placeholder="Enter your Email">
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleInputPassword1">Customer Address</label>
                                 <input type="text" class="form-control" id="fname" name="cust_address" placeholder="Enter your Customer Address">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Branch Name</label>
-                                <input type="text" class="form-control" id="fname" name="branch_name" placeholder="Enter your Branch Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Type</label>
-                                <input type="text" class="form-control" id="fname" name="type" placeholder="Enter your Type">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Price</label>
-                                <input type="text" class="form-control" id="fname" name="price" placeholder="Enter your Price">
-                            </div>
+
 
                          </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Recepient Name</label>
-                                    <input type="text" class="form-control" id="fname" name="rec_name" placeholder="Enter your Recepient Name">
+                                    <label for="exampleInputPassword1">Branch Name</label>
+                                    <input type="text" class="form-control" id="fname" name="branch_name" placeholder="Enter your Branch Name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Phone</label>
-                                    <input type="number" class="form-control" id="fname" name="phone" placeholder="Enter your Contact">
+                                    <label for="exampleInputPassword1">Division</label>
+                                    <input type="text" class="form-control" id="fname" name="division" placeholder="Enter your Division">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Recepient Address</label>
-                                    <input type="text" class="form-control" id="fname" name="rec_address" placeholder="Enter your Recepient Address">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Pickup Date</label>
-                                    <input type="date" class="form-control" id="fname" name="date" placeholder="Enter your Pickup Date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Time</label>
-                                    <input type="time" class="form-control" id="fname" name="time" placeholder="Enter your Time">
-                                </div>
+
                             </div>
                         </div>
                         <br>
