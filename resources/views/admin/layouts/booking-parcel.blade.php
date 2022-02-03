@@ -71,7 +71,7 @@
 
     <tr>
         <th scope="row">{{$key+1}}</th>
-        <td>{{$list->name}}</td>
+        <td>{{$list->user->name}}</td>
         {{-- <td>{{$list->address}}</td> --}}
         {{-- <td>{{$list->phone}}</td> --}}
         {{-- <td>{{$list->weight}}</td> --}}

@@ -99,7 +99,7 @@
 
                         <li class="nav-item"><a class="nav-link" href="{{route('user.contact')}}">Contact</a></li>
 
-                        <li class="nav-item"><a class="nav-link" href="about us.html"> About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('about.us.create')}}"> About Us</a></li>
 
                     </ul>
                     @if(auth()->user())

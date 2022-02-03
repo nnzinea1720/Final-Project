@@ -35,6 +35,7 @@ class BookingController extends Controller
     {
 
 
+
 //    dd($request->all());
 
     $image=null;
@@ -66,6 +67,7 @@ class BookingController extends Controller
             'total_cost'=>$request->total_cost,
             'date'=>$request->date,
             'track_number'=>date('Ymdhmis'),
+            'user_id'=>auth()->user()->id,
 
         ]);
          return redirect()->back();
@@ -73,7 +75,8 @@ class BookingController extends Controller
 
     public function view()
     {
-        $lists=Bookingparcel::all();
+        $lists=Bookingparcel::with('user')->get();
+        //dd($lists);
         return view('admin.layouts.booking-parcel',compact('lists'));
     }
 

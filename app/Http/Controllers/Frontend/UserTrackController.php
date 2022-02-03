@@ -40,7 +40,8 @@ class UserTrackController extends Controller
  public function history($id)
  {
     //   dd($id);
-    $paymentHistory= Payment::where('id',$id)->first();
+    $paymentHistory= Payment::where('bookingsparcel_id',$id)->first();
+    // dd($paymentHistory);
      return view ('frontend.partials.Payment',compact('paymentHistory'));
  }
 

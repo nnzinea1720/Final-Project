@@ -21,6 +21,7 @@ use App\Http\Controllers\frontend\InformationController;
 use App\Http\Controllers\frontend\ProfileController;
 use App\Http\Controllers\frontend\UpdateController;
 use App\Http\Controllers\frontend\UserTrackController;
+use App\Http\Controllers\frontend\AboutUsController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,10 @@ Route::get('/', function () {
 
 
 Route::group(['prefix'=>'user-portal'],function(){
+    Route::group(['middleware'=>'web_auth'],function(){
+        Route::get('/Booking Parcel',[BookingController::class,'booking'])->name('user.booking.parcel');
+        Route::post('/Booking Parcel',[BookingController::class,'store'])->name('user.booking.store');
+    });
     Route::get('/', function () {
         return view('Frontend.index');
     })->name('user');
@@ -66,8 +71,7 @@ Route::group(['prefix'=>'user-portal'],function(){
 
     Route::get('/Our Services',[ServiceController::class,'service'])->name('user.our.services');
 
-    Route::get('/Booking Parcel',[BookingController::class,'booking'])->name('user.booking.parcel');
-    Route::post('/Booking Parcel',[BookingController::class,'store'])->name('user.booking.store');
+
 
     Route::get('/Profile',[ProfileController::class,'profile'])->name('user.profile');
 
@@ -80,13 +84,25 @@ Route::group(['prefix'=>'user-portal'],function(){
     Route::get('/UserTrack',[UserTrackController::class,'tracking'])->name('user.tracking');
     Route::post('/UserTrack',[UserTrackController::class,'store'])->name('user.tracking.store');
     Route::get('/UserTrack/Tracking-list',[UserTrackController::class,'list'])->name('user.tracking.list');
-    Route::get('/UserTrack/search',[UserTrackController::class,'show'])->name('user.tracking.show');
+    // Route::get('/UserTrack/search',[UserTrackController::class,'show'])->name('user.tracking.show');
+
+    Route::get('/Information/Tracking/search',[UserTrackController::class,'show'])->name('user.tracking.show');
+
     Route::get('/information/tracking information',[UserTrackController::class,'info'])->name('user.tracking.information');
     // Route::get('/service/payment-status/{id}',[UserTrackController::class,'history'])->name('user.tracking.history');
     // Route::get('/User/payment-status/payment/{id}',[PaymentController::class,'Payment'])->name('user.payment.status.create');
     // Route::post('/User/payment-status',[PaymentController::class,'store'])->name('user.payment.status.store');
       Route::get('/information/tracking information/view/{id}',[UserTrackController::class,'history'])->name('user.tracking.history');
+
+    //About
+     Route::get('About-Us',[AboutUsController::class,'create'])->name('about.us.create');
+
+
+
+
+
 });
+
 
 
 
@@ -172,7 +188,9 @@ Route::group(['prefix'=>'admin-portal','middleware'=>['auth','login']],function(
 
      Route::get('/track',[TrackController::class,'create'])->name('track.create');
      Route::post('/track',[TrackController::class,'store'])->name('track.store');
-     Route::get('/UserTrack/search',[UserTrackController::class,'show'])->name('user.tracking.show');
+
+     Route::get('/UserTrack/search',[TrackController::class,'show'])->name('admin.tracking.show');
+    //  Route::get('/Information/Tracking/search',[UserTrackController::class,'show'])->name('user.tracking.show');
 
     //  Admin
 
@@ -208,5 +226,10 @@ Route::group(['prefix'=>'admin-portal','middleware'=>['auth','login']],function(
     //Notice
     Route::get('page/Notice',[NoticeController::class,'create'])->name('notice.create');
     Route::post('page/Notice',[NoticeController::class,'store'])->name('notice.store');
+
+
+
+
+
 
 });
