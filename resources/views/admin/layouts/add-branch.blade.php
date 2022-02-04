@@ -24,21 +24,22 @@
                         <input type="text" class="form-control" id="fname" name="district" placeholder="Enter your District">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Office Name</label>
-                        <input type="text" class="form-control" id="fname" name="office" placeholder="Enter your Office Name">
+                        <label for="exampleInputPassword1">Branch Name</label>
+                        <input type="text" class="form-control" id="fname" name="office" placeholder="Enter your Branch Name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Address</label>
+                        <label for="exampleInputPassword1">Branch Id</label>
+                        <input type="number" class="form-control" id="fname" name="number" placeholder="Enter your Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Branch Address</label>
                         <input type="text" class="form-control" id="fname" name="address" placeholder="Enter your Address">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Contact</label>
                         <input type="text" class="form-control" id="fname" name="contact" placeholder="Enter your Contact">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Office Type</label>
-                        <input type="text" class="form-control" id="fname" name="type"placeholder="Enter your Office Type">
-                    </div>
+
 
                     <button type="submit" class="btn btn-primary">Submit</button>
 

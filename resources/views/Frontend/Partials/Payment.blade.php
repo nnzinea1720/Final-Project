@@ -50,7 +50,7 @@
                         <td>
                             {{-- <a class="btn btn-primary" href="{{route('backend.category.views',$category->id)}}">View</a> --}}
                             {{-- <a class="btn btn-primary" href="{{route('branch.update',$branch->id)}}">Update</a> --}}
-
+                            <a href="{{route('user')}}" class="btn btn-outline-primary solid blank">Back To Home</a>
 
                         </td>
                     </tr>

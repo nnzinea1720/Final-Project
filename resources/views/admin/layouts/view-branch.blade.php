@@ -10,9 +10,10 @@
          <P>division: {{$branch->division}}</P>
          <p>district: {{$branch->district}}</p>
          <p>office: {{$branch->office}}</p>
+         <p>office: {{$branch->number}}</p>
          <p>address: {{$branch->address}}</p>
          <p>contact: {{$branch->contact}}</p>
-         <p>type: {{$branch->type}}</p>
+
 
 
 

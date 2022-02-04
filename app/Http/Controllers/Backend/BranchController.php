@@ -17,7 +17,7 @@ class BranchController extends Controller
          $branchs = Branch::where('id', 'LIKE', '%' .$search. '%')
          ->orWhere('division', 'LIKE', '%' .$search. '%')
          ->orWhere('district', 'LIKE', '%' .$search. '%')
-         ->orWhere('office', 'LIKE', '%' .$search. '%')
+         ->orWhere('branch_id', 'LIKE', '%' .$search. '%')
          ->orWhere('contact', 'LIKE', '%' .$search. '%')->get();
         return view('admin.layouts.branch-list',compact('branchs'));
       }
@@ -41,6 +41,7 @@ class BranchController extends Controller
 
 
 
+
     public function store(Request $request)
     {
         Branch::create([
@@ -48,9 +49,9 @@ class BranchController extends Controller
                 'division'=>$request->division,
                 'district'=>$request->district,
                 'office'=>$request->office,
+                'number'=>$request->number,
                 'address'=>$request->address,
                 'contact'=>$request->contact,
-                'type'=>$request->type,
 
 
         ]);
@@ -84,9 +85,10 @@ class BranchController extends Controller
             'division'=>$request->division,
                 'district'=>$request->district,
                 'office'=>$request->office,
+                'number'=>$request->number,
                 'address'=>$request->address,
                 'contact'=>$request->contact,
-                'type'=>$request->type,
+
 
 
         ]);
@@ -110,6 +112,19 @@ class BranchController extends Controller
             $branch=Branch::find($id);
             return view('admin.layouts.view-branch',compact('branch'));
         }
+
+        // public function branchinfo()
+        // {
+        //     $lists=Branch::all();
+        //     return view('frontend.partials.Branch-info');
+        // }
+
+        public function info()
+        {
+           $branchs= Branch::all();
+            return view('frontend.partials.Branch-info',compact('branchs'));
+        }
+
 
 
 }

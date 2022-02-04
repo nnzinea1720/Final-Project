@@ -21,7 +21,7 @@
 
 <h1></h1>
 <br>
-<a href="{{route('branch.create')}}" class="btn btn-success">Create new branch list</a>
+<a href="{{route('branch.create')}}" class="btn btn-success">Create new Branch</a>
 
 <!-- <------Search----->
 <form  action="{{route('branch.show')}}">
@@ -45,9 +45,9 @@
         <th scope="col">division</th>
         <th scope="col">district</th>
         <th scope="col">office</th>
+        <th scope="col">number</th>
         <th scope="col">address</th>
         <th scope="col">contact</th>
-        <th scope="col">type</th>
         <th scope="col">Action</th>
 
 
@@ -60,9 +60,9 @@
                 <td>{{$branch->division}}</td>
                 <td>{{$branch->district}}</td>
                 <td>{{$branch->office}}</td>
+                <td>{{$branch->number}}</td>
                 <td>{{$branch->address}}</td>
                 <td>{{$branch->contact}}</td>
-                <td>{{$branch->type}}</td>
                 <td>
                     {{-- <a class="btn btn-primary" href="{{route('backend.category.views',$category->id)}}">View</a> --}}
                     <a class="btn btn-success" href="{{route('branch.view',$branch->id)}}"> View</a>

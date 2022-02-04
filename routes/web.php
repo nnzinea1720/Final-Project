@@ -17,7 +17,6 @@ use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\frontend\ServiceController;
 use App\Http\Controllers\frontend\BookingController;
-use App\Http\Controllers\frontend\InformationController;
 use App\Http\Controllers\frontend\ProfileController;
 use App\Http\Controllers\frontend\UpdateController;
 use App\Http\Controllers\frontend\UserTrackController;
@@ -75,8 +74,8 @@ Route::group(['prefix'=>'user-portal'],function(){
 
     Route::get('/Profile',[ProfileController::class,'profile'])->name('user.profile');
 
-    Route::get('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
-    Route::post('/Customer Information',[InformationController::class,'store'])->name('user.customer.store');
+    // Route::get('/Customer Information',[InformationController::class,'information'])->name('user.customer.information');
+    // Route::post('/Customer Information',[InformationController::class,'store'])->name('user.customer.store');
 
     Route::get('/Update/{id}',[UpdateController::class,'update'])->name('user.update');
     Route::put('/Update/{id}',[UpdateController::class,'store'])->name('user.update.store');
@@ -96,6 +95,11 @@ Route::group(['prefix'=>'user-portal'],function(){
 
     //About
      Route::get('About-Us',[AboutUsController::class,'create'])->name('about.us.create');
+
+     //Branch Information
+     Route::get('/Information/Branch',[BranchController::class,'info'])->name('user.information.branch.info');
+
+
 
 
 
@@ -228,7 +232,7 @@ Route::group(['prefix'=>'admin-portal','middleware'=>['auth','login']],function(
     Route::post('page/Notice',[NoticeController::class,'store'])->name('notice.store');
 
 
-
+    Route::get('/Information/Branch',[BranchController::class,'info'])->name('user.branch.info');
 
 
 

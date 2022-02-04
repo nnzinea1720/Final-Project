@@ -9,7 +9,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="card-title">
-                    <div class="title">Notice</div>
+                    <a href="" class="btn btn-info"> Create Notice </a>
                 </div>
             </div>
             <div class="panel-body">
@@ -25,7 +25,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
-
+                    <a href="{{route('admin')}}" class="btn btn-danger"> Home </a>
                 </form>
             </div>
         </div>

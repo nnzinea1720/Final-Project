@@ -42,8 +42,9 @@
 
 </h1>
 <body>
-
     <section style="padding-top:60px;">
+        <a style="margin-left:20px;" href="{{route('user')}}" class="btn btn-outline-primary solid blank" type="back">Back To Home</a>
+
         <div class="container">
             <div class="row">
               <div class="col-md-6 offset-md-3">
@@ -78,7 +79,6 @@
                             <button class="btn btn-outline-success solid blank" type="submit">Send Message</button>
                           </div>
                         </form>
-
                       </div>
                     </div>
                 </div>

@@ -23,24 +23,32 @@
              <a href="{{route('user')}}" class="btn btn-outline-primary solid blank">Back To Home</a>
 
 
-    <h3 style="text-align: center; font-weight: bold; margin-bottom: 20px;">Notice Information</h3>
+    <h3 style="text-align: center; font-weight: bold; margin-bottom: 20px;">Branch Information</h3>
 
 <table class="table">
     <thead>
     <tr>
         <th scope="col" style="font-size: 20px;">#</th>
-        <th scope="col" style="font-size: 20px;">date</th>
-        <th scope="col"style="font-size: 20px;" >Notice Name</th>
+        <th scope="col" style="font-size: 20px;">Division</th>
+        <th scope="col"style="font-size: 20px;" >District</th>
+        <th scope="col"style="font-size: 20px;" >Branch Name</th>
+        <th scope="col"style="font-size: 20px;" >Branch Id</th>
+        <th scope="col"style="font-size: 20px;" >Address</th>
+        <th scope="col"style="font-size: 20px;" >Contact</th>
 
 
     </tr>
     </thead>
     <tbody>
-        @foreach ($notices as $key=>$notice)
+        @foreach ($branchs as $key=>$branch)
             <tr>
                 <td style="font-size: 20px;">{{$key}}</td>
-                <td style="font-size: 20px;">{{$notice->date}}</td>
-                <td style="font-size: 20px;">{{$notice->notice_name}}</td>
+                <td style="font-size: 20px;">{{$branch->division}}</td>
+                <td style="font-size: 20px;">{{$branch->district}}</td>
+                <td style="font-size: 20px;">{{$branch->office}}</td>
+                <td style="font-size: 20px;">{{$branch->number}}</td>
+                <td style="font-size: 20px;">{{$branch->address}}</td>
+                <td style="font-size: 20px;">{{$branch->contact}}</td>
 
             </tr>
         @endforeach

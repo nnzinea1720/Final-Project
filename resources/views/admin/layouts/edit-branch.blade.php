@@ -25,8 +25,12 @@
                         <input value="{{$branchs->district}}" type="text" class="form-control" id="fname" name="district" placeholder="Enter your District">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Office Name</label>
+                        <label for="exampleInputPassword1">Branch Name</label>
                         <input value="{{$branchs->office}} "type="text" class="form-control" id="fname" name="office" placeholder="Enter your Office Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Branch Id</label>
+                        <input value="{{$branchs->number}} "type="text" class="form-control" id="fname" name="number" placeholder="Enter your Id">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Address</label>
@@ -36,12 +40,10 @@
                         <label for="exampleInputPassword1">Contact</label>
                         <input value="{{$branchs->contact}}" type="text" class="form-control" id="fname" name="contact" placeholder="Enter your Contact">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Office Type</label>
-                        <input value="{{$branchs->type}}" type="text" class="form-control" id="fname" name="type"placeholder="Enter your Office Type">
-                    </div>
 
-                    <button type="submit" class="btn btn-default">Submit</button>
+
+                    <button type="submit" class="btn btn-danger">Edited</button>
+                    <a href="{{route('branch.list')}}" class="btn btn-success">Back</a>
 
                 </form>
             </div>

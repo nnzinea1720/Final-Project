@@ -41,7 +41,8 @@
                               <input type="number" class="form-control" id="fname" name="no"placeholder="Enter Tracking No ">
                             </div>
                              <br>
-                            <button type="submit" class="btn btn-outline-primary">Submit</button>
+                            <button type="submit" class="btn btn-outline-primary">Track</button>
+                            <a href="{{route('user')}}" class="btn btn-outline-danger solid blank">Back To Home</a>
                           </form>
                       </div>
                     </div>

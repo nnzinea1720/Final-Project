@@ -85,7 +85,7 @@
         <div class="container h-100">
           <div class="row align-items-center h-100">
               <div class="col-md-12 text-center">
-                <h2 class="slide-title" style="color:black" data-animation-in="slideInLeft"> Years of excellence in</h2>
+                <h2 class="slide-sub-title" style="color:black" data-animation-in="slideInLeft"> Welcome To</h2>
                 <h3 class="slide-sub-title" style="color:black" data-animation-in="slideInRight">Courier Service</h3>
                 <p data-animation-in="slideInLeft" data-duration-in="1.2">
                     <a href="{{route('user.tracking.information')}}" class="slider btn btn-primary">Payment Status</a>

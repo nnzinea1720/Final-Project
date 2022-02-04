@@ -22,8 +22,8 @@
                         <label for="inputState">State</label>
                         <select id="inputState" name="status"class="form-control">
                           <option selected>Set Status</option>
-                          <option value="delivered">Delivered</option>
                           <option value="panding">Pending</option>
+                          <option value="delivered">Delivered</option>
                           <option value="return">Return</option>
                         </select>
 

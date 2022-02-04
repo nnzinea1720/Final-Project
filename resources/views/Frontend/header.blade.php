@@ -76,8 +76,8 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Information <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{route('user.customer.information')}}"> Customer Information</a></li>
-                                <li><a href="Branch_info.html">Branch Information </a></li>
+                                {{-- <li><a href="{{route('user.customer.information')}}"> Customer Information</a></li> --}}
+                                <li><a href="{{route('user.information.branch.info')}}">Branch Information </a></li>
                               <li><a href="{{route('user.tracking')}}">Tracking </a></li>
                               <li><a href="{{route('user.tracking.information')}}">Payment Status </a></li>
                             </ul>
@@ -105,7 +105,7 @@
                     @if(auth()->user())
 
 
-                        <li class="nav-item"><a class="nav-link" href="{{route('user.logout')}}">logout</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color:white" href="{{route('user.logout')}}">logout</a></li>
 
                          @else
 

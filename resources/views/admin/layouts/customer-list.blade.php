@@ -23,7 +23,7 @@
     <h1></h1>
     <br>
     <a href="{{route('customer.create')}}" class="btn btn-danger">Create New Customer</a>
-
+    <a href="{{route('admin')}}" class="btn btn-primary">Back</a>
 
 
 

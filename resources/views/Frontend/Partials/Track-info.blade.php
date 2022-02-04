@@ -35,6 +35,7 @@
 <h1></h1>
 <br>
 <a href="" class="btn btn-success"> Booking Parcel List</a>
+<a href="{{route('user')}}" class="btn btn-outline-danger solid blank">Back To Home</a>
 <br><br>
 
     {{-- <h1 style="font-weight: bold; padding-top: 10px;">Parcel Booking</h1> --}}
@@ -51,10 +52,12 @@
         <th scope="col">Type</th>
         <th scope="col">Tracking Number</th>
         <th scope="col">Image</th>
+        <th scope="col">From Branch</th>
         <th scope="col">Receiver</th>
          <th scope="col">Receiver Address</th>
          <th scope="col">Contact</th>
          <th scope="col">Delivery Area</th>
+         <th scope="col">To Branch</th>
          <th scope="col">Total Cost</th>
           <th scope="col">Booking Date</th>
          <th scope="col">Status</th>
@@ -74,10 +77,12 @@
         <td>{{$list->type}}</td>
         <td>{{$list->track_number}}</td>
         <td> <img style="border-radius: 4px;" width="100px;" src=" {{url('/uploads/bookings/'.$list->image)}}" alt="image"></td>
+        <td>{{$list->from}}</td>
         <td>{{$list->receiver}}</td>
         <td>{{$list->rec_address}}</td>
         <td>{{$list->contact}}</td>
         <td>{{$list->delivery_area}}</td>
+        <td>{{$list->to}}</td>
         <td>{{$list->total_cost}}</td>
         <td>{{$list->date}}</td>
         <td>{{$list->status}}</td>

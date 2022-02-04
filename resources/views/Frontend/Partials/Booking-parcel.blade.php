@@ -65,6 +65,13 @@
                             <label for="exampleInputPassword1">Image</label>
                             <input name="image/png" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">From Branch</label>
+                            <input type="text" class="form-control" id="fname" name="from" placeholder="Enter your From ">
+                        </div>
+
+
+
 
 
 
@@ -92,6 +99,10 @@
                                 {{-- <input type="text" class="form-control" id="fname" name="delivery_area" placeholder="Enter your Delivery Area"> --}}
                             </div>
                             <div class="form-group">
+                                <label for="exampleInputPassword1">To Branch</label>
+                                <input type="text" class="form-control" id="fname" name="to" placeholder="Enter your to">
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleInputPassword1">Total Cost</label>
                                 <input type="number" class="form-control" id="fname" name="total_cost" placeholder="Enter your Total Cost">
                             </div>
@@ -103,7 +114,7 @@
                     </div>
                      <br>
                     <button type="submit" class="btn btn-outline-danger">Book Now</button>
-
+                    <a href="{{route('user')}}" class="btn btn-outline-success solid blank">Back To Home</a>
                 </form>
             </div>
         </div>

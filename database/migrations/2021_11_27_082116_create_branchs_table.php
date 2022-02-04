@@ -18,9 +18,9 @@ class CreateBranchsTable extends Migration
             $table->string('division');
              $table->string('district');
              $table->string('office');
+             $table->string('number');
              $table->string('address');
              $table->string('contact');
-             $table->string('type');
             $table->timestamps();
         });
     }
